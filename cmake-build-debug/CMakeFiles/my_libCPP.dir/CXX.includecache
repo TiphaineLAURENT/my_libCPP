@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/tiphaine/CLionProjects/my_libCPP/Timer.cpp
+Timer.hpp
+/home/tiphaine/CLionProjects/my_libCPP/Timer.hpp
+
+/home/tiphaine/CLionProjects/my_libCPP/Timer.hpp
+chrono
+-
+thread
+-
+condition_variable
+-
+
