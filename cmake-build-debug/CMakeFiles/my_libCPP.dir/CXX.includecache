@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/tiphaine/CLionProjects/my_libCPP/Timer.cpp
+/home/tiphaine/CLionProjects/my_libCPP/src/Timer.cpp
 Timer.hpp
-/home/tiphaine/CLionProjects/my_libCPP/Timer.hpp
+/home/tiphaine/CLionProjects/my_libCPP/src/Timer.hpp
 
-/home/tiphaine/CLionProjects/my_libCPP/Timer.hpp
+/home/tiphaine/CLionProjects/my_libCPP/src/Timer.hpp
 chrono
 -
 thread

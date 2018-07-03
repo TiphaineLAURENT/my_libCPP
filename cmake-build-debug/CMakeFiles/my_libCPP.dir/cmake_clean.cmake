@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/my_libCPP.dir/Timer.cpp.o"
+  "CMakeFiles/my_libCPP.dir/src/Timer.cpp.o"
   "libmy_libCPP.pdb"
   "libmy_libCPP.so"
 )

@@ -8,7 +8,7 @@
 #include <iostream>
 #include <zconf.h>
 
-#include "library.hpp"
+#include "src/library.hpp"
 
 static void my_exec()
 {

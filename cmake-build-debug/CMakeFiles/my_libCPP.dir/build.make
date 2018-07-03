@@ -57,38 +57,38 @@ include CMakeFiles/my_libCPP.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/my_libCPP.dir/flags.make
 
-CMakeFiles/my_libCPP.dir/Timer.cpp.o: CMakeFiles/my_libCPP.dir/flags.make
-CMakeFiles/my_libCPP.dir/Timer.cpp.o: ../Timer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tiphaine/CLionProjects/my_libCPP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/my_libCPP.dir/Timer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/my_libCPP.dir/Timer.cpp.o -c /home/tiphaine/CLionProjects/my_libCPP/Timer.cpp
+CMakeFiles/my_libCPP.dir/src/Timer.cpp.o: CMakeFiles/my_libCPP.dir/flags.make
+CMakeFiles/my_libCPP.dir/src/Timer.cpp.o: ../src/Timer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tiphaine/CLionProjects/my_libCPP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/my_libCPP.dir/src/Timer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/my_libCPP.dir/src/Timer.cpp.o -c /home/tiphaine/CLionProjects/my_libCPP/src/Timer.cpp
 
-CMakeFiles/my_libCPP.dir/Timer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_libCPP.dir/Timer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tiphaine/CLionProjects/my_libCPP/Timer.cpp > CMakeFiles/my_libCPP.dir/Timer.cpp.i
+CMakeFiles/my_libCPP.dir/src/Timer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_libCPP.dir/src/Timer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tiphaine/CLionProjects/my_libCPP/src/Timer.cpp > CMakeFiles/my_libCPP.dir/src/Timer.cpp.i
 
-CMakeFiles/my_libCPP.dir/Timer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_libCPP.dir/Timer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tiphaine/CLionProjects/my_libCPP/Timer.cpp -o CMakeFiles/my_libCPP.dir/Timer.cpp.s
+CMakeFiles/my_libCPP.dir/src/Timer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_libCPP.dir/src/Timer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tiphaine/CLionProjects/my_libCPP/src/Timer.cpp -o CMakeFiles/my_libCPP.dir/src/Timer.cpp.s
 
-CMakeFiles/my_libCPP.dir/Timer.cpp.o.requires:
+CMakeFiles/my_libCPP.dir/src/Timer.cpp.o.requires:
 
-.PHONY : CMakeFiles/my_libCPP.dir/Timer.cpp.o.requires
+.PHONY : CMakeFiles/my_libCPP.dir/src/Timer.cpp.o.requires
 
-CMakeFiles/my_libCPP.dir/Timer.cpp.o.provides: CMakeFiles/my_libCPP.dir/Timer.cpp.o.requires
-	$(MAKE) -f CMakeFiles/my_libCPP.dir/build.make CMakeFiles/my_libCPP.dir/Timer.cpp.o.provides.build
-.PHONY : CMakeFiles/my_libCPP.dir/Timer.cpp.o.provides
+CMakeFiles/my_libCPP.dir/src/Timer.cpp.o.provides: CMakeFiles/my_libCPP.dir/src/Timer.cpp.o.requires
+	$(MAKE) -f CMakeFiles/my_libCPP.dir/build.make CMakeFiles/my_libCPP.dir/src/Timer.cpp.o.provides.build
+.PHONY : CMakeFiles/my_libCPP.dir/src/Timer.cpp.o.provides
 
-CMakeFiles/my_libCPP.dir/Timer.cpp.o.provides.build: CMakeFiles/my_libCPP.dir/Timer.cpp.o
+CMakeFiles/my_libCPP.dir/src/Timer.cpp.o.provides.build: CMakeFiles/my_libCPP.dir/src/Timer.cpp.o
 
 
 # Object files for target my_libCPP
 my_libCPP_OBJECTS = \
-"CMakeFiles/my_libCPP.dir/Timer.cpp.o"
+"CMakeFiles/my_libCPP.dir/src/Timer.cpp.o"
 
 # External object files for target my_libCPP
 my_libCPP_EXTERNAL_OBJECTS =
 
-libmy_libCPP.so: CMakeFiles/my_libCPP.dir/Timer.cpp.o
+libmy_libCPP.so: CMakeFiles/my_libCPP.dir/src/Timer.cpp.o
 libmy_libCPP.so: CMakeFiles/my_libCPP.dir/build.make
 libmy_libCPP.so: CMakeFiles/my_libCPP.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tiphaine/CLionProjects/my_libCPP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library libmy_libCPP.so"
@@ -99,7 +99,7 @@ CMakeFiles/my_libCPP.dir/build: libmy_libCPP.so
 
 .PHONY : CMakeFiles/my_libCPP.dir/build
 
-CMakeFiles/my_libCPP.dir/requires: CMakeFiles/my_libCPP.dir/Timer.cpp.o.requires
+CMakeFiles/my_libCPP.dir/requires: CMakeFiles/my_libCPP.dir/src/Timer.cpp.o.requires
 
 .PHONY : CMakeFiles/my_libCPP.dir/requires
 

@@ -136,32 +136,32 @@ my_libCPP/fast:
 	$(MAKE) -f CMakeFiles/my_libCPP.dir/build.make CMakeFiles/my_libCPP.dir/build
 .PHONY : my_libCPP/fast
 
-Timer.o: Timer.cpp.o
+src/Timer.o: src/Timer.cpp.o
 
-.PHONY : Timer.o
+.PHONY : src/Timer.o
 
 # target to build an object file
-Timer.cpp.o:
-	$(MAKE) -f CMakeFiles/my_libCPP.dir/build.make CMakeFiles/my_libCPP.dir/Timer.cpp.o
-.PHONY : Timer.cpp.o
+src/Timer.cpp.o:
+	$(MAKE) -f CMakeFiles/my_libCPP.dir/build.make CMakeFiles/my_libCPP.dir/src/Timer.cpp.o
+.PHONY : src/Timer.cpp.o
 
-Timer.i: Timer.cpp.i
+src/Timer.i: src/Timer.cpp.i
 
-.PHONY : Timer.i
+.PHONY : src/Timer.i
 
 # target to preprocess a source file
-Timer.cpp.i:
-	$(MAKE) -f CMakeFiles/my_libCPP.dir/build.make CMakeFiles/my_libCPP.dir/Timer.cpp.i
-.PHONY : Timer.cpp.i
+src/Timer.cpp.i:
+	$(MAKE) -f CMakeFiles/my_libCPP.dir/build.make CMakeFiles/my_libCPP.dir/src/Timer.cpp.i
+.PHONY : src/Timer.cpp.i
 
-Timer.s: Timer.cpp.s
+src/Timer.s: src/Timer.cpp.s
 
-.PHONY : Timer.s
+.PHONY : src/Timer.s
 
 # target to generate assembly for a file
-Timer.cpp.s:
-	$(MAKE) -f CMakeFiles/my_libCPP.dir/build.make CMakeFiles/my_libCPP.dir/Timer.cpp.s
-.PHONY : Timer.cpp.s
+src/Timer.cpp.s:
+	$(MAKE) -f CMakeFiles/my_libCPP.dir/build.make CMakeFiles/my_libCPP.dir/src/Timer.cpp.s
+.PHONY : src/Timer.cpp.s
 
 test.o: test.cpp.o
 
@@ -200,9 +200,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... my_test"
 	@echo "... my_libCPP"
-	@echo "... Timer.o"
-	@echo "... Timer.i"
-	@echo "... Timer.s"
+	@echo "... src/Timer.o"
+	@echo "... src/Timer.i"
+	@echo "... src/Timer.s"
 	@echo "... test.o"
 	@echo "... test.i"
 	@echo "... test.s"

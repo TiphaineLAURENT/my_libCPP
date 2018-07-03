@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/tiphaine/CLionProjects/my_libCPP/Timer.hpp
+/home/tiphaine/CLionProjects/my_libCPP/src/Timer.hpp
 chrono
 -
 thread
@@ -14,15 +14,15 @@ thread
 condition_variable
 -
 
-/home/tiphaine/CLionProjects/my_libCPP/library.hpp
+/home/tiphaine/CLionProjects/my_libCPP/src/library.hpp
 Timer.hpp
-/home/tiphaine/CLionProjects/my_libCPP/Timer.hpp
+/home/tiphaine/CLionProjects/my_libCPP/src/Timer.hpp
 
 /home/tiphaine/CLionProjects/my_libCPP/test.cpp
 iostream
 -
 zconf.h
 -
-library.hpp
-/home/tiphaine/CLionProjects/my_libCPP/library.hpp
+src/library.hpp
+/home/tiphaine/CLionProjects/my_libCPP/src/library.hpp
 

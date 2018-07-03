@@ -1,1 +1,1 @@
-/usr/bin/c++ -fPIC -g  -shared -Wl,-soname,libmy_libCPP.so -o libmy_libCPP.so CMakeFiles/my_libCPP.dir/Timer.cpp.o 
+/usr/bin/c++ -fPIC -g  -shared -Wl,-soname,libmy_libCPP.so -o libmy_libCPP.so CMakeFiles/my_libCPP.dir/src/Timer.cpp.o 

@@ -3,11 +3,11 @@ project(my_libCPP)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_library(my_libCPP SHARED library.hpp Timer.cpp Timer.hpp)
+add_library(my_libCPP SHARED src/library.hpp src/Timer.cpp src/Timer.hpp)
 
 find_package(Threads)
 
-add_executable(my_test library.hpp test.cpp)
+add_executable(my_test src/library.hpp test.cpp)
 
 target_link_libraries(my_test
         my_libCPP
