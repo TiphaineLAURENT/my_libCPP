@@ -7,6 +7,8 @@
 #IncludeRegexTransform: 
 
 /home/tiphaine/Github/my_libCPP/src/Timer.hpp
+iostream
+-
 chrono
 -
 thread

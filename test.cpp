@@ -26,7 +26,7 @@ static void my_until()
 
 int main()
 {
-	MY_LIBCPP::Timer<std::chrono::milliseconds> timer;
+	MY_LIBCPP::Timer<std::chrono::seconds> timer;
 
 	std::cout << timer << std::endl;
 	timer.start(2);
