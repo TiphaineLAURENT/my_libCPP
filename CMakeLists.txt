@@ -6,7 +6,7 @@ project(my_libCPP)
 set(CMAKE_CXX_STANDARD 17)
 
 
-add_library(my_libCPP SHARED src/library.hpp src/Timer.hpp)
+add_library(my_libCPP SHARED src/library.hpp src/Timer.hpp src/String.cpp src/String.hpp)
 
 find_package(Threads)
 

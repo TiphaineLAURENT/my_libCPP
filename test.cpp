@@ -26,7 +26,7 @@ static void my_until()
 
 int main()
 {
-	MY_LIBCPP::Timer<std::chrono::seconds> timer;
+	/*MY_LIBCPP::Timer<std::chrono::seconds> timer;
 
 	std::cout << timer << std::endl;
 	timer.start(2);
@@ -43,6 +43,11 @@ int main()
 	timer.wait();
 
 	timer.repeat_until(my_until, 1, 10);
-	timer.wait();
+	timer.wait();*/
+
+	MY_LIBCPP::String str("42.42");
+	std::cout << str.to_int() << std::endl;
+	std::cout << str.to_float() << std::endl;
+
 	return 0;
 }

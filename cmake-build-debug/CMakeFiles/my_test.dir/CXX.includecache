@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+/home/tiphaine/Github/my_libCPP/src/String.hpp
+string
+-
+
 /home/tiphaine/Github/my_libCPP/src/Timer.hpp
 iostream
 -
@@ -19,6 +23,8 @@ condition_variable
 /home/tiphaine/Github/my_libCPP/src/library.hpp
 Timer.hpp
 /home/tiphaine/Github/my_libCPP/src/Timer.hpp
+String.hpp
+/home/tiphaine/Github/my_libCPP/src/String.hpp
 
 /home/tiphaine/Github/my_libCPP/test.cpp
 iostream

@@ -6,5 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/tiphaine/Github/my_libCPP/src/Timer.cpp
+/home/tiphaine/Github/my_libCPP/src/String.cpp
+String.hpp
+/home/tiphaine/Github/my_libCPP/src/String.hpp
+
+/home/tiphaine/Github/my_libCPP/src/String.hpp
+string
+-
 

@@ -130,6 +130,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/tiphaine/Github/my_libCPP/src/String.cpp">
+			<Option target="my_libCPP"/>
+		</Unit>
+		<Unit filename="/home/tiphaine/Github/my_libCPP/src/String.hpp">
+			<Option target="my_libCPP"/>
+		</Unit>
 		<Unit filename="/home/tiphaine/Github/my_libCPP/src/Timer.hpp">
 			<Option target="my_libCPP"/>
 		</Unit>

@@ -2,5 +2,6 @@
 # define MY_LIBCPP_LIBRARY_HPP
 
 # include "Timer.hpp"
+# include "String.hpp"
 
 #endif

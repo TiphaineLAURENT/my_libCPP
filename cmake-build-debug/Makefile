@@ -136,6 +136,33 @@ my_libCPP/fast:
 	$(MAKE) -f CMakeFiles/my_libCPP.dir/build.make CMakeFiles/my_libCPP.dir/build
 .PHONY : my_libCPP/fast
 
+src/String.o: src/String.cpp.o
+
+.PHONY : src/String.o
+
+# target to build an object file
+src/String.cpp.o:
+	$(MAKE) -f CMakeFiles/my_libCPP.dir/build.make CMakeFiles/my_libCPP.dir/src/String.cpp.o
+.PHONY : src/String.cpp.o
+
+src/String.i: src/String.cpp.i
+
+.PHONY : src/String.i
+
+# target to preprocess a source file
+src/String.cpp.i:
+	$(MAKE) -f CMakeFiles/my_libCPP.dir/build.make CMakeFiles/my_libCPP.dir/src/String.cpp.i
+.PHONY : src/String.cpp.i
+
+src/String.s: src/String.cpp.s
+
+.PHONY : src/String.s
+
+# target to generate assembly for a file
+src/String.cpp.s:
+	$(MAKE) -f CMakeFiles/my_libCPP.dir/build.make CMakeFiles/my_libCPP.dir/src/String.cpp.s
+.PHONY : src/String.cpp.s
+
 test.o: test.cpp.o
 
 .PHONY : test.o
@@ -173,6 +200,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... my_test"
 	@echo "... my_libCPP"
+	@echo "... src/String.o"
+	@echo "... src/String.i"
+	@echo "... src/String.s"
 	@echo "... test.o"
 	@echo "... test.i"
 	@echo "... test.s"
