@@ -6,15 +6,5 @@
 
 #IncludeRegexTransform: 
 
-/home/tiphaine/CLionProjects/my_libCPP/src/Timer.cpp
-Timer.hpp
-/home/tiphaine/CLionProjects/my_libCPP/src/Timer.hpp
-
-/home/tiphaine/CLionProjects/my_libCPP/src/Timer.hpp
-chrono
--
-thread
--
-condition_variable
--
+/home/tiphaine/Github/my_libCPP/src/Timer.cpp
 

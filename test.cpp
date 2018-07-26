@@ -6,7 +6,6 @@
 */
 
 #include <iostream>
-#include <zconf.h>
 
 #include "src/library.hpp"
 
@@ -27,13 +26,15 @@ static void my_until()
 
 int main()
 {
-	MY_LIBCPP::Timer timer;
+	MY_LIBCPP::Timer<std::chrono::milliseconds> timer;
 
+	std::cout << timer << std::endl;
 	timer.start(2);
 
 	std::cout << timer.ended() << std::endl;
 	timer.wait();
 	std::cout << timer.ended() << std::endl;
+	std::cout << timer << std::endl;
 
 	timer.exec(my_exec, 1);
 	timer.wait();

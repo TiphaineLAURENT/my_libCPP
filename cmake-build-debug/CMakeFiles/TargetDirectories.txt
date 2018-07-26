@@ -1,4 +1,4 @@
-/home/tiphaine/CLionProjects/my_libCPP/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/tiphaine/CLionProjects/my_libCPP/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/tiphaine/CLionProjects/my_libCPP/cmake-build-debug/CMakeFiles/my_test.dir
-/home/tiphaine/CLionProjects/my_libCPP/cmake-build-debug/CMakeFiles/my_libCPP.dir
+/home/tiphaine/Github/my_libCPP/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/tiphaine/Github/my_libCPP/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/tiphaine/Github/my_libCPP/cmake-build-debug/CMakeFiles/my_test.dir
+/home/tiphaine/Github/my_libCPP/cmake-build-debug/CMakeFiles/my_libCPP.dir

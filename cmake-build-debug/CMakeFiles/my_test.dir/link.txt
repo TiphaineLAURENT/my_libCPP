@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/my_test.dir/test.cpp.o  -o my_test -Wl,-rpath,/home/tiphaine/CLionProjects/my_libCPP/cmake-build-debug libmy_libCPP.so -lpthread 
+/usr/bin/c++  -g   CMakeFiles/my_test.dir/test.cpp.o  -o my_test -Wl,-rpath,/home/tiphaine/Github/my_libCPP/cmake-build-debug libmy_libCPP.so -lpthread 
