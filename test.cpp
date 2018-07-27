@@ -54,5 +54,7 @@ int main()
 	std::cout << MY_LIBCPP::Math::map<float>(10.1, 10, 20, 0, 10) <<
 	        std::endl;*/
 
+	srandom(time(nullptr));
+	std::cout << MY_LIBCPP::Math::Vector2D::random2D() << std::endl;
 	return 0;
 }

@@ -35,16 +35,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25b7cc46-be5c-4ed1-964b-243546b183b8" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Float.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Float.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Math.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Math.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Vector2D.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Vector2D.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Timer.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Timer.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/library.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/library.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Math.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Math.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vector2D.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vector2D.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Vector2D.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vector2D.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -65,14 +59,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="3320" />
+          <entry key="cpp" value="3426" />
           <entry key="gitignore" value="27" />
-          <entry key="hpp" value="2447" />
+          <entry key="hpp" value="2562" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="5767" />
+          <entry key="ObjectiveC" value="5988" />
           <entry key="PLAIN_TEXT" value="27" />
         </counts>
       </usages-collector>
@@ -80,12 +74,12 @@
         <counts>
           <entry key="cpp" value="7" />
           <entry key="gitignore" value="1" />
-          <entry key="hpp" value="10" />
+          <entry key="hpp" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="ObjectiveC" value="17" />
+          <entry key="ObjectiveC" value="18" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
@@ -103,8 +97,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
-              <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+            <state relative-caret-position="493">
+              <caret line="57" column="72" lean-forward="true" selection-start-line="57" selection-start-column="72" selection-end-line="57" selection-end-column="72" />
               <folding>
                 <element signature="e#78#97#0" expanded="true" />
               </folding>
@@ -154,10 +148,9 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Math.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="25" column="26" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
+            <state relative-caret-position="493">
+              <caret line="40" selection-start-line="40" selection-end-line="40" />
               <folding>
-                <element signature="e#129#146#0" expanded="true" />
                 <element signature="e#464#473#0" expanded="true" />
               </folding>
             </state>
@@ -167,8 +160,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Math.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="342">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Vector2D.hpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="417">
+              <caret line="73" column="60" lean-forward="true" selection-start-line="73" selection-start-column="60" selection-end-line="73" selection-end-column="60" />
+              <folding>
+                <element signature="e#141#158#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -176,10 +181,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Vector2D.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="206" lean-forward="true" selection-start-line="206" selection-end-line="206" />
+            <state relative-caret-position="360">
+              <caret line="235" column="34" lean-forward="true" selection-start-line="235" selection-start-column="34" selection-end-line="235" selection-end-column="34" />
               <folding>
-                <element signature="e#78#98#0" expanded="true" />
+                <element signature="e#78#94#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -190,15 +195,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="399">
               <caret line="21" selection-start-line="21" selection-end-line="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="11" selection-start-column="11" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -238,15 +234,15 @@
         <option value="$PROJECT_DIR$/src/String.cpp" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/Timer.hpp" />
-        <option value="$PROJECT_DIR$/src/Vector2D.hpp" />
         <option value="$PROJECT_DIR$/src/Math.cpp" />
         <option value="$PROJECT_DIR$/src/Random.hpp" />
         <option value="$PROJECT_DIR$/src/Random.cpp" />
         <option value="$PROJECT_DIR$/src/library.hpp" />
         <option value="$PROJECT_DIR$/src/Float.hpp" />
         <option value="$PROJECT_DIR$/src/Float.cpp" />
-        <option value="$PROJECT_DIR$/src/Vector2D.cpp" />
         <option value="$PROJECT_DIR$/src/Math.hpp" />
+        <option value="$PROJECT_DIR$/src/Vector2D.hpp" />
+        <option value="$PROJECT_DIR$/src/Vector2D.cpp" />
         <option value="$PROJECT_DIR$/test.cpp" />
       </list>
     </option>
@@ -353,7 +349,7 @@
       <workItem from="1530475063473" duration="13061000" />
       <workItem from="1530636024229" duration="215000" />
       <workItem from="1532627904623" duration="6977000" />
-      <workItem from="1532638109679" duration="15097000" />
+      <workItem from="1532638109679" duration="15667000" />
     </task>
     <task id="LOCAL-00001" summary="Timer templatisation">
       <created>1532637444929</created>
@@ -366,7 +362,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35350000" />
+    <option name="totallyTimeSpent" value="35920000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -387,17 +383,17 @@
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.47278547" visible="true" weight="0.32864866" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.46905017" visible="true" weight="0.32864866" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.49947917" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32984293" />
       <window_info anchor="bottom" id="CMake" order="8" sideWeight="0.49786553" weight="0.32864866" />
       <window_info anchor="bottom" id="TeamCity" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.5272145" side_tool="true" visible="true" weight="0.32864866" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.53094983" side_tool="true" visible="true" weight="0.32864866" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.47972253" weight="0.32864866" />
+      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.4759872" weight="0.32864866" />
       <window_info anchor="right" id="Database" order="0" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -440,13 +436,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Timer.hpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="474">
@@ -454,13 +443,6 @@
           <folding>
             <element signature="e#137#156#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vector2D.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
@@ -478,38 +460,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Vector2D.cpp">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="206" lean-forward="true" selection-start-line="206" selection-end-line="206" />
-          <folding>
-            <element signature="e#78#98#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="19">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Math.cpp">
+    <entry file="file://$PROJECT_DIR$/src/library.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Math.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="25" column="26" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
-          <folding>
-            <element signature="e#129#146#0" expanded="true" />
-            <element signature="e#464#473#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Float.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="95">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -523,24 +484,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/library.hpp">
+    <entry file="file://$PROJECT_DIR$/src/Float.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+        <state relative-caret-position="417">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/src/Math.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="493">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+          <folding>
+            <element signature="e#464#473#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Math.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vector2D.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="73" column="60" lean-forward="true" selection-start-line="73" selection-start-column="60" selection-end-line="73" selection-end-column="60" />
+          <folding>
+            <element signature="e#141#158#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vector2D.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="235" column="34" lean-forward="true" selection-start-line="235" selection-start-column="34" selection-end-line="235" selection-end-column="34" />
+          <folding>
+            <element signature="e#78#94#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
+        <state relative-caret-position="493">
+          <caret line="57" column="72" lean-forward="true" selection-start-line="57" selection-start-column="72" selection-end-line="57" selection-end-column="72" />
           <folding>
             <element signature="e#78#97#0" expanded="true" />
           </folding>

@@ -5,6 +5,8 @@
 ** Vector2D
 */
 
+#include <cmath>
+#include "Vector2D.hpp"
 #include "Float.hpp"
 #include "Math.hpp"
 
@@ -146,7 +148,7 @@ Vector2D &Vector2D::limit(float max)
 {
 	float mSq = magSq();
 	if (mSq > max * max) {
-		*this /= sqrt(mSq) * max;
+		*this /= sqrtf(mSq) * max;
 	}
 	return *this;
 }
@@ -227,6 +229,12 @@ Vector2D &operator/(const Vector2D &vector1, const Vector2D &vector2)
 {
 	Vector2D div(vector1);
 	return div /= vector2;
+}
+
+std::ostream &operator<<(std::ostream &out, const Vector2D &vector)
+{
+	out << vector.to_string();
+	return out;
 }
 
 }
