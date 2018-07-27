@@ -231,6 +231,31 @@ Vector2D &operator/(const Vector2D &vector1, const Vector2D &vector2)
 	return div /= vector2;
 }
 
+Vector2D &operator+(const Vector2D &vector, float value)
+{
+	Vector2D add(vector);
+	return add += value;
+}
+
+Vector2D &operator-(const Vector2D &vector, float value)
+{
+	Vector2D sub(vector);
+	return sub -= value;
+}
+
+Vector2D &operator*(const Vector2D &vector, float value)
+{
+	Vector2D mul(vector);
+	return mul *= value;
+}
+
+Vector2D &operator/(const Vector2D &vector, float value)
+{
+	Vector2D div(vector);
+	return div /= value;
+}
+
+
 std::ostream &operator<<(std::ostream &out, const Vector2D &vector)
 {
 	out << vector.to_string();
