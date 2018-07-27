@@ -3,5 +3,7 @@
 
 # include "Timer.hpp"
 # include "String.hpp"
+# include "Float.hpp"
+# include "Math.hpp"
 
 #endif

@@ -16,35 +16,6 @@
 namespace MY_LIBCPP
 {
 
-void exec_thread_function(void (*function)(), const
-std::chrono::time_point<std::chrono::system_clock>
-&end
-)
-{
-	std::this_thread::sleep_until(end);
-	function();
-}
-
-void repeat_thread_function(void (*function)(), int *iterations)
-{
-	for (; *iterations > 0; --*iterations)
-		function();
-}
-
-void repeat_until_thread_function(void (*function)(), const
-std::chrono::time_point<std::chrono::system_clock> &end, int *iterations)
-{
-	if (*iterations == -1) {
-		while (std::chrono::system_clock::now() <= end)
-			function();
-		*iterations = 0;
-	} else {
-		for (; std::chrono::system_clock::now() <= end && *iterations
-		                                                  > 0; --*iterations)
-			function();
-	}
-}
-
 template <class T>
 class Timer
 {
@@ -118,6 +89,34 @@ private:
 	std::condition_variable _condition;
 
 private:
+	static void exec_thread_function(void (*function)(), const
+	std::chrono::time_point<std::chrono::system_clock>
+	&end
+	)
+	{
+		std::this_thread::sleep_until(end);
+		function();
+	}
+
+	static void repeat_thread_function(void (*function)(), int *iterations)
+	{
+		for (; *iterations > 0; --*iterations)
+			function();
+	}
+
+	static void repeat_until_thread_function(void (*function)(), const
+	std::chrono::time_point<std::chrono::system_clock> &end, int *iterations)
+	{
+		if (*iterations == -1) {
+			while (std::chrono::system_clock::now() <= end)
+				function();
+			*iterations = 0;
+		} else {
+			for (; std::chrono::system_clock::now() <= end && *iterations
+			                                                  > 0; --*iterations)
+				function();
+		}
+	}
 };
 
 template <class T>

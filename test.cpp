@@ -45,9 +45,14 @@ int main()
 	timer.repeat_until(my_until, 1, 10);
 	timer.wait();*/
 
-	MY_LIBCPP::String str("42.42");
+	/*MY_LIBCPP::String str("42.42");
 	std::cout << str.to_int() << std::endl;
-	std::cout << str.to_float() << std::endl;
+	std::cout << str.to_float() << std::endl;*/
+
+	/*std::cout << MY_LIBCPP::Math::map<int>(300, 0, 600, 255, 0) <<
+	        std::endl;
+	std::cout << MY_LIBCPP::Math::map<float>(10.1, 10, 20, 0, 10) <<
+	        std::endl;*/
 
 	return 0;
 }
