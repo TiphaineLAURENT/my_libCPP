@@ -5,19 +5,37 @@
 ** Float
 */
 
-#include <cstdlib>
 #include "Float.hpp"
 
 namespace MY_LIBCPP
 {
 
-Float::Float(float f)
-	: _f(f)
-{}
-
-float Float::randomFloat()
+Float::Float(const float &v)
+	: Value<float>(v)
 {
-	return static_cast<float>(random() / static_cast<float>(RAND_MAX));
+	_type = "Float";
+}
+
+Float operator+(const float &value1, const Float &value2)
+{
+	return Float(value1 + value2.value());
+}
+
+Float operator-(const float &value1, const Float &value2)
+{
+	return Float(value1 - value2.value());
+}
+
+Float operator*(const float &value1, const Float &value2)
+{
+	return Float(value1 * value2.value());
+}
+
+Float operator/(const float &value1, const Float &value2)
+{
+	if (value2 == 0)
+		return Float(INFINITY);
+	return Float(value1 / value2.value());
 }
 
 }

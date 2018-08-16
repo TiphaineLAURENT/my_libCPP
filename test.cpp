@@ -26,6 +26,8 @@ static void my_until()
 
 int main()
 {
+	MY_LIBCPP::Float::initRandom();
+
 	/*MY_LIBCPP::Timer<std::chrono::seconds> timer;
 
 	std::cout << timer << std::endl;
@@ -54,7 +56,32 @@ int main()
 	std::cout << MY_LIBCPP::Math::map<float>(10.1, 10, 20, 0, 10) <<
 	        std::endl;*/
 
-	srandom(time(nullptr));
-	std::cout << MY_LIBCPP::Math::Vector2D::random2D() << std::endl;
+	/*srandom(time(nullptr));
+	MY_LIBCPP::Math::Vector2D vector =
+		MY_LIBCPP::Math::Vector2D::random2D();
+	std::cout << vector << std::endl;
+	std::cout << MY_LIBCPP::Math::Vector2D(vector) << std::endl;
+
+	vector.set(10, 100);
+	vector.setMag(23);
+	std::cout << vector.mag() << std::endl;
+	std::cout << vector.normalize() << std::endl;*/
+
+
+	MY_LIBCPP::Float v = 3;
+	v *= 5;
+	std::cout << v << std::endl;
+
+	std::cout << 0 * MY_LIBCPP::Float(5.0) * 0 << std::endl;
+	std::cout << 0 / MY_LIBCPP::Float(5.0) / 0 << std::endl;
+	std::cout << MY_LIBCPP::Float(0) * MY_LIBCPP::Float(5.0) *
+	MY_LIBCPP::Float(0) << std::endl;
+	std::cout << MY_LIBCPP::Float(0) / MY_LIBCPP::Float(5.0) /
+	MY_LIBCPP::Float(0) << std::endl;
+
+	if (MY_LIBCPP::Float(2.0) != 3)
+		std::cout << "False" << std::endl;
+	std::cout << "Test " + MY_LIBCPP::Float::randomValue() << std::endl;
+
 	return 0;
 }

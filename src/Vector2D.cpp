@@ -7,8 +7,9 @@
 
 #include <cmath>
 #include "Vector2D.hpp"
-#include "Float.hpp"
+#include "Value.hpp"
 #include "Math.hpp"
+#include "Float.hpp"
 
 namespace MY_LIBCPP
 {
@@ -204,52 +205,52 @@ bool Vector2D::operator==(const Vector2D &other) const
 
 Vector2D Vector2D::random2D()
 {
-	return Vector2D(MY_LIBCPP::Float::randomFloat() * TWO_PI);
+	return Vector2D((float)MY_LIBCPP::Float::randomValue() * TWO_PI);
 }
 
-Vector2D &operator+(const Vector2D &vector1, const Vector2D &vector2)
+Vector2D operator+(const Vector2D &vector1, const Vector2D &vector2)
 {
 	Vector2D add(vector1);
 	return add += vector2;
 }
 
-Vector2D &operator-(const Vector2D &vector1, const Vector2D &vector2)
+Vector2D operator-(const Vector2D &vector1, const Vector2D &vector2)
 {
 	Vector2D sub(vector1);
 	return sub -= vector2;
 }
 
-Vector2D &operator*(const Vector2D &vector1, const Vector2D &vector2)
+Vector2D operator*(const Vector2D &vector1, const Vector2D &vector2)
 {
 	Vector2D mul(vector1);
 	return mul *= vector2;
 }
 
-Vector2D &operator/(const Vector2D &vector1, const Vector2D &vector2)
+Vector2D operator/(const Vector2D &vector1, const Vector2D &vector2)
 {
 	Vector2D div(vector1);
 	return div /= vector2;
 }
 
-Vector2D &operator+(const Vector2D &vector, float value)
+Vector2D operator+(const Vector2D &vector, float value)
 {
 	Vector2D add(vector);
 	return add += value;
 }
 
-Vector2D &operator-(const Vector2D &vector, float value)
+Vector2D operator-(const Vector2D &vector, float value)
 {
 	Vector2D sub(vector);
 	return sub -= value;
 }
 
-Vector2D &operator*(const Vector2D &vector, float value)
+Vector2D operator*(const Vector2D &vector, float value)
 {
 	Vector2D mul(vector);
 	return mul *= value;
 }
 
-Vector2D &operator/(const Vector2D &vector, float value)
+Vector2D operator/(const Vector2D &vector, float value)
 {
 	Vector2D div(vector);
 	return div /= value;

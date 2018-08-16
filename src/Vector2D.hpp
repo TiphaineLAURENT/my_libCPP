@@ -10,6 +10,7 @@
 
 #include <string>
 #include <array>
+
 namespace MY_LIBCPP
 {
 
@@ -66,14 +67,14 @@ private:
 private:
 };
 
-Vector2D &operator+(const Vector2D&, const Vector2D&);
-Vector2D &operator+(const Vector2D&, float value);
-Vector2D &operator-(const Vector2D&, const Vector2D&);
-Vector2D &operator-(const Vector2D&, float value);
-Vector2D &operator*(const Vector2D&, const Vector2D&);
-Vector2D &operator*(const Vector2D&, float value);
-Vector2D &operator/(const Vector2D&, const Vector2D&);
-Vector2D &operator/(const Vector2D&, float value);
+Vector2D operator+(const Vector2D&, const Vector2D&);
+Vector2D operator+(const Vector2D&, float value);
+Vector2D operator-(const Vector2D&, const Vector2D&);
+Vector2D operator-(const Vector2D&, float value);
+Vector2D operator*(const Vector2D&, const Vector2D&);
+Vector2D operator*(const Vector2D&, float value);
+Vector2D operator/(const Vector2D&, const Vector2D&);
+Vector2D operator/(const Vector2D&, float value);
 
 std::ostream &operator<<(std::ostream &out, const Vector2D&);
 
