@@ -16,16 +16,12 @@ namespace MY_LIBCPP
 class Float : public Value<float>
 {
 public:
-	explicit Float(const float &v);
+	Float(const float &v);
 	~Float() override = default;
-	Float &operator=(const int &value)
-	{
-		return *this;
-	}
-	/*Float(const Float &copy) = default;
-	Float &operator=(const Value &other);
+	Float(const Float &copy) = default;
+	Float &operator=(const float &other);
 	Float(Float &&) noexcept = default;
-	Float &operator=(Float &&) = default;*/
+	Float &operator=(Float &&) = default;
 
 public:
 	static constexpr float MAXVALUE = 3.40282e+38;

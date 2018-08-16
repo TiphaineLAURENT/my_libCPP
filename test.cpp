@@ -68,10 +68,17 @@ int main()
 	std::cout << vector.normalize() << std::endl;*/
 
 
-	MY_LIBCPP::Float v = 3;
+	/*MY_LIBCPP::Float v = 3;
 	v *= 5;
+	v /= 2;
+	v += 3;
+	v -= 2;
 	std::cout << v << std::endl;
 
+	std::cout << MY_LIBCPP::Float(MY_LIBCPP::Value(v)) << std::endl;
+
+	std::cout << 0 + MY_LIBCPP::Float(5.0) + 0 << std::endl;
+	std::cout << 0 - MY_LIBCPP::Float(5.0) - 0 << std::endl;
 	std::cout << 0 * MY_LIBCPP::Float(5.0) * 0 << std::endl;
 	std::cout << 0 / MY_LIBCPP::Float(5.0) / 0 << std::endl;
 	std::cout << MY_LIBCPP::Float(0) * MY_LIBCPP::Float(5.0) *
@@ -81,7 +88,7 @@ int main()
 
 	if (MY_LIBCPP::Float(2.0) != 3)
 		std::cout << "False" << std::endl;
-	std::cout << "Test " + MY_LIBCPP::Float::randomValue() << std::endl;
+	std::cout << "Test " + MY_LIBCPP::Float::randomValue() << std::endl;*/
 
 	return 0;
 }

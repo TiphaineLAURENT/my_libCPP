@@ -16,6 +16,12 @@ Float::Float(const float &v)
 	_type = "Float";
 }
 
+Float &Float::operator=(const float &other)
+{
+	_v = other;
+	return *this;
+}
+
 Float operator+(const float &value1, const Float &value2)
 {
 	return Float(value1 + value2.value());

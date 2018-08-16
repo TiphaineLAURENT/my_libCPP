@@ -22,14 +22,14 @@ public:
 		: _v(v), _type("Value")
 	{}
 	virtual ~Value() = default;
-	Value(const Value<T> &copy) = default;
+	Value(const Value &copy) = default;
 	Value<T> &operator=(const Value &other)
 	{
 		_v = other.value();
 		return *this;
 	}
 	Value(Value &&) noexcept = default;
-	Value<T> &operator=(Value<T> &&) noexcept = default;
+	Value &operator=(Value &&) noexcept = default;
 
 public:
 	const T &value() const noexcept
@@ -47,7 +47,7 @@ public:
 		return std::to_string(_v);
 	}
 
-	bool operator==(const Value<T> &other) const
+	bool operator==(const Value &other) const
 	{
 		return _v == other.value();
 	}
@@ -57,7 +57,7 @@ public:
 		return _v == other;
 	}
 
-	bool operator!=(const Value<T> &other) const
+	bool operator!=(const Value &other) const
 	{
 		return !(*this == other);
 	}
@@ -67,25 +67,25 @@ public:
 		return !(this->_v == other);
 	}
 
-	Value<T> &operator+=(const Value<T> &other)
+	Value<T> &operator+=(const Value &other)
 	{
 		_v += other.value();
 		return *this;
 	}
 
-	Value<T> &operator-=(const Value<T> &other)
+	Value<T> &operator-=(const Value &other)
 	{
 		_v -= other.value();
 		return *this;
 	}
 
-	Value<T> &operator*=(const Value<T> &other)
+	Value<T> &operator*=(const Value &other)
 	{
 		_v *= other.value();
 		return *this;
 	}
 
-	Value<T> &operator/=(const Value<T> &other)
+	Value<T> &operator/=(const Value &other)
 	{
 		if (other.value() == 0)
 			_v = INFINITY;
@@ -121,22 +121,22 @@ public:
 		return *this;
 	}
 
-	Value<T> operator+(const Value<T> &other)
+	Value<T> operator+(const Value &other)
 	{
 		return Value<T>(_v + other.value());
 	}
 
-	Value<T> operator-(const Value<T> &other)
+	Value<T> operator-(const Value &other)
 	{
 		return Value<T>(_v - other.value());
 	}
 
-	Value<T> operator*(const Value<T> &other)
+	Value<T> operator*(const Value &other)
 	{
 		return Value<T>(_v * other.value());
 	}
 
-	Value<T> operator/(const Value<T> &other)
+	Value<T> operator/(const Value &other)
 	{
 		if (other == 0)
 			return Value<T>(INFINITY);

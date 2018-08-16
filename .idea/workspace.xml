@@ -43,15 +43,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25b7cc46-be5c-4ed1-964b-243546b183b8" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Value.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Value.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Float.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Float.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Float.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Float.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vector2D.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vector2D.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Vector2D.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Vector2D.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/library.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/library.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Value.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Value.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -75,15 +70,15 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="5818" />
+          <entry key="cpp" value="5922" />
           <entry key="gitignore" value="27" />
-          <entry key="hpp" value="4929" />
+          <entry key="hpp" value="5015" />
           <entry key="mm" value="35" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="10782" />
+          <entry key="ObjectiveC" value="10972" />
           <entry key="PLAIN_TEXT" value="27" />
         </counts>
       </usages-collector>
@@ -111,11 +106,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="70" column="31" selection-start-line="70" selection-start-column="31" selection-end-line="70" selection-end-column="31" />
+            <state relative-caret-position="493">
+              <caret line="92" column="17" lean-forward="true" selection-start-line="92" selection-start-column="17" selection-end-line="92" selection-end-column="17" />
               <folding>
                 <element signature="e#78#97#0" expanded="true" />
               </folding>
@@ -144,11 +139,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Value.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="28" column="29" lean-forward="true" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+            <state relative-caret-position="379">
+              <caret line="190" column="5" lean-forward="true" selection-start-line="190" selection-start-column="5" selection-end-line="190" selection-end-column="5" />
               <folding>
                 <element signature="e#0#73#0" />
                 <element signature="e#513#554#0" />
@@ -187,8 +182,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Float.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="341">
+              <caret line="26" column="46" lean-forward="true" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -196,8 +191,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Float.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
+            <state relative-caret-position="380">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
             </state>
           </provider>
         </entry>
@@ -275,10 +270,10 @@
         <option value="$PROJECT_DIR$/src/Value.cpp" />
         <option value="$PROJECT_DIR$/src/Math.hpp" />
         <option value="$PROJECT_DIR$/src/Vector2D.cpp" />
-        <option value="$PROJECT_DIR$/test.cpp" />
-        <option value="$PROJECT_DIR$/src/Float.cpp" />
         <option value="$PROJECT_DIR$/src/Float.hpp" />
+        <option value="$PROJECT_DIR$/src/Float.cpp" />
         <option value="$PROJECT_DIR$/src/Value.hpp" />
+        <option value="$PROJECT_DIR$/test.cpp" />
       </list>
     </option>
   </component>
@@ -332,6 +327,9 @@
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$" />
@@ -386,7 +384,7 @@
       <workItem from="1532627904623" duration="6977000" />
       <workItem from="1532638109679" duration="22081000" />
       <workItem from="1533172687237" duration="42000" />
-      <workItem from="1534320359725" duration="17343000" />
+      <workItem from="1534320359725" duration="19819000" />
     </task>
     <task id="LOCAL-00001" summary="Timer templatisation">
       <created>1532637444929</created>
@@ -399,7 +397,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59719000" />
+    <option name="totallyTimeSpent" value="62195000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -420,17 +418,17 @@
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" sideWeight="0.4994664" weight="0.32972974" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.45144078" weight="0.32864866" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.44557098" visible="true" weight="0.32864866" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.4909285" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.49839914" weight="0.32972974" />
       <window_info anchor="bottom" id="CMake" order="8" sideWeight="0.49733192" weight="0.32864866" />
       <window_info anchor="bottom" id="TeamCity" order="9" sideWeight="0.49893278" weight="0.32972974" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.5506937" side_tool="true" visible="true" weight="0.32864866" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.55442905" side_tool="true" visible="true" weight="0.32864866" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.4994664" weight="0.32972974" />
-      <window_info active="true" anchor="bottom" id="Messages" order="13" sideWeight="0.4493063" visible="true" weight="0.32864866" />
+      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.4439701" weight="0.32864866" />
       <window_info anchor="right" id="Database" order="0" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -527,16 +525,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="70" column="31" selection-start-line="70" selection-start-column="31" selection-end-line="70" selection-end-column="31" />
-          <folding>
-            <element signature="e#78#97#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -554,24 +542,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Float.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Float.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Value.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="28" column="29" lean-forward="true" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+        <state relative-caret-position="379">
+          <caret line="190" column="5" lean-forward="true" selection-start-line="190" selection-start-column="5" selection-end-line="190" selection-end-column="5" />
           <folding>
             <element signature="e#0#73#0" />
             <element signature="e#513#554#0" />
@@ -602,6 +576,30 @@
             <element signature="e#1774#1814#0" />
             <element signature="e#1441#1561#0" />
             <element signature="e#2745#2862#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Float.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Float.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="26" column="46" lean-forward="true" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="92" column="17" lean-forward="true" selection-start-line="92" selection-start-column="17" selection-end-line="92" selection-end-column="17" />
+          <folding>
+            <element signature="e#78#97#0" expanded="true" />
           </folding>
         </state>
       </provider>
