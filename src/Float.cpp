@@ -32,24 +32,24 @@ Float Float::randomFloat(const Float &min, const Float &max)
 
 Float operator+(const float &value1, const Float &value2)
 {
-return value1 + value2.value();
+	return value1 + value2.value();
 }
 
 Float operator-(const float &value1, const Float &value2)
 {
-return value1 - value2.value();
+	return value1 - value2.value();
 }
 
 Float operator*(const float &value1, const Float &value2)
 {
-return value1 * value2.value();
+	return value1 * value2.value();
 }
 
 Float operator/(const float &value1, const Float &value2)
 {
-if (value2 == 0)
-return INFINITY;
-return value1 / value2.value();
+	if (value2 == 0)
+		return INFINITY;
+	return value1 / value2.value();
 }
 
 }

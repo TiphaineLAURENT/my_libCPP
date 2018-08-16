@@ -3,6 +3,7 @@
 
 # include "Value.hpp"
 # include "Float.hpp"
+# include "Int.hpp"
 
 # include "Timer.hpp"
 # include "String.hpp"

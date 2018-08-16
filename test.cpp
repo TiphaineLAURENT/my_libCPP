@@ -87,8 +87,31 @@ int main()
 	MY_LIBCPP::Float(0) << std::endl;
 
 	if (MY_LIBCPP::Float(2.0) != 3)
-		std::cout << "False" << std::endl;*/
-	std::cout << "Test " + MY_LIBCPP::Float::randomFloat() << std::endl;
+		std::cout << "False" << std::endl;
+	std::cout << "Test " + MY_LIBCPP::Float::randomFloat() << std::endl;*/
+
+	MY_LIBCPP::Int v = 3;
+	v *= 5;
+	v /= 2;
+	v += 3;
+	v -= 2;
+	std::cout << v << std::endl;
+
+	std::cout << MY_LIBCPP::Int(MY_LIBCPP::Value(v)) << std::endl;
+
+	std::cout << 0 + MY_LIBCPP::Int(5) + 0 << std::endl;
+	std::cout << 0 - MY_LIBCPP::Int(5) - 0 << std::endl;
+	std::cout << 0 * MY_LIBCPP::Int(5) * 0 << std::endl;
+	std::cout << 0 / MY_LIBCPP::Int(5) / 0 << std::endl;
+
+	std::cout << MY_LIBCPP::Int(0) * MY_LIBCPP::Int(5) *
+	             MY_LIBCPP::Int(0) << std::endl;
+	std::cout << MY_LIBCPP::Int(0) / MY_LIBCPP::Int(5) /
+	             MY_LIBCPP::Int(0) << std::endl;
+
+	if (MY_LIBCPP::Int(2) != 3)
+		std::cout << "False" << std::endl;
+	std::cout << "Test " + MY_LIBCPP::Int::randomInt() << std::endl;
 
 	return 0;
 }

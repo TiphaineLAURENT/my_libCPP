@@ -5,8 +5,8 @@
 ** Value<float>
 */
 
-#ifndef MY_LIBCPP_FLOAfloat_HPP
-# define MY_LIBCPP_FLOAfloat_HPP
+#ifndef MY_LIBCPP_FLOAT_HPP
+# define MY_LIBCPP_FLOAT_HPP
 
 # include "Value.hpp"
 
@@ -24,6 +24,7 @@ public:
 	Float &operator=(Float &&) = default;
 
 public:
+	// https://en.cppreference.com/w/cpp/language/types
 	static constexpr float MAXVALUE = 3.402823e+38;
 	static constexpr float MINVALUE = 1.401298e-45;
 
@@ -43,4 +44,4 @@ Float operator/(const float &value1, const Float &value2);
 
 }
 
-#endif /* !MY_LIBCPP_FLOAfloat_HPP */
+#endif /* !MY_LIBCPP_FLOAT_HPP */
