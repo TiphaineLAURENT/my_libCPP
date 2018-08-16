@@ -68,6 +68,46 @@ public:
 		return !(this->_v == other);
 	}
 
+	bool operator<=(const Value &other) const
+	{
+		return _v <= other.value();
+	}
+
+	bool operator<=(const T &other) const
+	{
+		return _v <= other;
+	}
+
+	bool operator>=(const Value &other) const
+	{
+		return _v >= other.value();
+	}
+
+	bool operator>=(const T &other) const
+	{
+		return _v >= other;
+	}
+
+	bool operator>(const Value &other) const
+	{
+		return _v > other.value();
+	}
+
+	bool operator>(const T &other) const
+	{
+		return _v > other;
+	}
+
+	bool operator<(const Value &other) const
+	{
+		return _v < other.value();
+	}
+
+	bool operator<(const T &other) const
+	{
+		return _v < other;
+	}
+
 	Value<T> &operator+=(const Value &other)
 	{
 		_v += other.value();
@@ -144,26 +184,62 @@ public:
 		return Value<T>(_v / other.value());
 	}
 
-	Value<T> operator+(const float &other)
+	Value<T> operator+(const T &other)
 	{
 		return Value<T>(_v + other);
 	}
 
-	Value<T> operator-(const float &other)
+	Value<T> operator-(const T &other)
 	{
 		return Value<T>(_v - other);
 	}
 
-	Value<T> operator*(const float &other)
+	Value<T> operator*(const T &other)
 	{
 		return Value<T>(_v * other);
 	}
 
-	Value<T> operator/(const float &other)
+	Value<T> operator/(const T &other)
 	{
 		if (other == 0)
 			return Value<T>(INFINITY);
 		return Value<T>(_v / other);
+	}
+
+	Value<T> operator%(const Value &other)
+	{
+		if (other == 0)
+			return Value<T>(other);
+		return Value<T>(_v % other.value());
+	}
+
+	Value<T> operator%(const T &other)
+	{
+		if (other == 0)
+			return Value<T>(other);
+		return Value<T>(_v % other);
+	}
+
+	const Value<T> &operator++()
+	{
+		_v++;
+		return *this;
+	}
+
+	const Value<T> &operator--()
+	{
+		_v--;
+		return *this;
+	}
+
+	const Value<T> operator++(int val)
+	{
+		return ++_v;
+	}
+
+	const Value<T> operator--(int val)
+	{
+		return --_v;
 	}
 
 	static void initRandom()
@@ -174,17 +250,23 @@ public:
 	static Value<T> randomValue()
 	{
 		return Value<T>(random() / static_cast<T>(RAND_MAX));
-		/*
-		** std::random_device rd;
-		** std::mt19937 gen(rd());
-		** std::uniform_int_distribution<> dis(1, 6);
-		** return Value<T>(dis(gen));
-		*/
 	}
 
 	explicit operator T() const
 	{
 		return _v;
+	}
+
+	Value<T> opposite() const
+	{
+		return Value<T>(-_v);
+	}
+
+	Value<T> inverse() const
+	{
+		if (_v == 0)
+			return Value<T>(0);
+		return Value<T>(1/_v);
 	}
 
 protected:
@@ -199,6 +281,11 @@ std::string operator+(const std::string &str, const Value<T> &v)
 {
 	return str + v.to_string();
 }
+template <class T>
+std::string operator+(const Value<T> &v, const std::string &str)
+{
+	return v.to_string() + str;
+}
 
 template <class T>
 std::ostream &operator<<(std::ostream &out, const Value<T> &v)
@@ -206,7 +293,6 @@ std::ostream &operator<<(std::ostream &out, const Value<T> &v)
 	out << v.value();
 	return out;
 }
-
 
 }
 

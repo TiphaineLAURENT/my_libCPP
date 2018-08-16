@@ -5,6 +5,7 @@
 ** Int
 */
 
+#include <iostream>
 #include "Int.hpp"
 
 namespace MY_LIBCPP
@@ -30,6 +31,28 @@ Int Int::randomInt(const Int &min, const Int &max)
 	return dis(gen);
 }
 
+std::vector<Int> Int::primeNumber(const Int &min, const Int &max)
+{
+	std::vector<Int> primes;
+	bool isPrime = false;
+
+	for (Int n = min; n < max; ++n) {
+		isPrime = true;
+
+		Int fs = floor(sqrt(n.value()));
+		for (Int i = 2; i <= fs; ++i) {
+			if (n % i == 0) {
+				isPrime = false;
+				break;
+			}
+		}
+
+		if (isPrime)
+			primes.push_back(n);
+	}
+	return primes;
+}
+
 Int operator+(const int &value1, const Int &value2)
 {
 	return value1 + value2.value();
@@ -48,6 +71,26 @@ Int operator*(const int &value1, const Int &value2)
 Int operator/(const int &value1, const Int &value2)
 {
 	return value1 / value2.value();
+}
+
+bool operator<=(const int &value1, const Int &value2)
+{
+	return value1 <= value2.value();
+}
+
+bool operator>=(const int &value1, const Int &value2)
+{
+	return value1 >= value2.value();
+}
+
+bool operator<(const int &value1, const Int &value2)
+{
+	return value1 < value2.value();
+}
+
+bool operator>(const int &value1, const Int &value2)
+{
+	return value1 > value2.value();
 }
 
 }

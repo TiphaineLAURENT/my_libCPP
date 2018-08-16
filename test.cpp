@@ -26,7 +26,7 @@ static void my_until()
 
 int main()
 {
-	MY_LIBCPP::Float::initRandom();
+	MY_LIBCPP::Value<int>::initRandom();
 
 	/*MY_LIBCPP::Timer<std::chrono::seconds> timer;
 
@@ -90,7 +90,7 @@ int main()
 		std::cout << "False" << std::endl;
 	std::cout << "Test " + MY_LIBCPP::Float::randomFloat() << std::endl;*/
 
-	MY_LIBCPP::Int v = 3;
+	/*MY_LIBCPP::Int v = 3;
 	v *= 5;
 	v /= 2;
 	v += 3;
@@ -111,7 +111,17 @@ int main()
 
 	if (MY_LIBCPP::Int(2) != 3)
 		std::cout << "False" << std::endl;
-	std::cout << "Test " + MY_LIBCPP::Int::randomInt() << std::endl;
+	std::cout << "Test " + MY_LIBCPP::Int::randomInt() << std::endl;*/
+
+	MY_LIBCPP::Int i = 0;
+	std::cout << i.opposite() << std::endl;
+	std::cout << i.inverse() << std::endl;
+	if (i == 0)
+		std::cout << "True" << std::endl;
+
+	for (auto &p : i.primeNumber())
+		std::cout << p + ",";
+	std::cout << std::endl;
 
 	return 0;
 }
