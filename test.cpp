@@ -87,8 +87,8 @@ int main()
 	MY_LIBCPP::Float(0) << std::endl;
 
 	if (MY_LIBCPP::Float(2.0) != 3)
-		std::cout << "False" << std::endl;
-	std::cout << "Test " + MY_LIBCPP::Float::randomValue() << std::endl;*/
+		std::cout << "False" << std::endl;*/
+	std::cout << "Test " + MY_LIBCPP::Float::randomFloat() << std::endl;
 
 	return 0;
 }

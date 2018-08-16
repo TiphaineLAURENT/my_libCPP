@@ -22,26 +22,34 @@ Float &Float::operator=(const float &other)
 	return *this;
 }
 
+Float Float::randomFloat(const Float &min, const Float &max)
+{
+	std::random_device rd;
+	std::mt19937 gen(rd());
+	std::uniform_real_distribution<float> dis(min.value(), max.value());
+	return dis(gen);
+}
+
 Float operator+(const float &value1, const Float &value2)
 {
-	return Float(value1 + value2.value());
+return value1 + value2.value();
 }
 
 Float operator-(const float &value1, const Float &value2)
 {
-	return Float(value1 - value2.value());
+return value1 - value2.value();
 }
 
 Float operator*(const float &value1, const Float &value2)
 {
-	return Float(value1 * value2.value());
+return value1 * value2.value();
 }
 
 Float operator/(const float &value1, const Float &value2)
 {
-	if (value2 == 0)
-		return Float(INFINITY);
-	return Float(value1 / value2.value());
+if (value2 == 0)
+return INFINITY;
+return value1 / value2.value();
 }
 
 }

@@ -10,6 +10,7 @@
 
 # include <cmath>
 # include <ostream>
+# include <random>
 
 namespace MY_LIBCPP
 {
@@ -173,6 +174,12 @@ public:
 	static Value<T> randomValue()
 	{
 		return Value<T>(random() / static_cast<T>(RAND_MAX));
+		/*
+		** std::random_device rd;
+		** std::mt19937 gen(rd());
+		** std::uniform_int_distribution<> dis(1, 6);
+		** return Value<T>(dis(gen));
+		*/
 	}
 
 	explicit operator T() const

@@ -24,8 +24,13 @@ public:
 	Float &operator=(Float &&) = default;
 
 public:
-	static constexpr float MAXVALUE = 3.40282e+38;
-	static constexpr float MINVALUE = -3.40282e+38;
+	static constexpr float MAXVALUE = 3.402823e+38;
+	static constexpr float MINVALUE = 1.401298e-45;
+
+	// static Float randomFloat(const Float &min = MINVALUE,
+	//                          const Float &max = MAXVALUE);
+	static Float randomFloat(const Float &min = 0,
+	                         const Float &max = 1);
 
 private:
 private:

@@ -43,7 +43,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25b7cc46-be5c-4ed1-964b-243546b183b8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Float.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Float.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Float.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Float.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Value.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Value.hpp" afterDir="false" />
@@ -70,15 +69,15 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="5922" />
+          <entry key="cpp" value="6032" />
           <entry key="gitignore" value="27" />
-          <entry key="hpp" value="5015" />
+          <entry key="hpp" value="5303" />
           <entry key="mm" value="35" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="10972" />
+          <entry key="ObjectiveC" value="11370" />
           <entry key="PLAIN_TEXT" value="27" />
         </counts>
       </usages-collector>
@@ -106,11 +105,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="92" column="17" lean-forward="true" selection-start-line="92" selection-start-column="17" selection-end-line="92" selection-end-column="17" />
+            <state relative-caret-position="455">
+              <caret line="90" column="66" selection-start-line="90" selection-start-column="66" selection-end-line="90" selection-end-column="66" />
               <folding>
                 <element signature="e#78#97#0" expanded="true" />
               </folding>
@@ -142,10 +141,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Value.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="190" column="5" lean-forward="true" selection-start-line="190" selection-start-column="5" selection-end-line="190" selection-end-column="5" />
+            <state relative-caret-position="398">
+              <caret line="176" column="18" lean-forward="true" selection-start-line="176" selection-start-column="18" selection-end-line="176" selection-end-column="18" />
               <folding>
                 <element signature="e#0#73#0" />
+                <element signature="e#133#150#0" expanded="true" />
                 <element signature="e#513#554#0" />
                 <element signature="e#551#593#0" />
                 <element signature="e#577#629#0" />
@@ -170,7 +170,6 @@
                 <element signature="e#2310#2395#0" />
                 <element signature="e#2398#2531#0" />
                 <element signature="e#1675#1708#0" />
-                <element signature="e#1706#1781#0" />
                 <element signature="e#1774#1814#0" />
                 <element signature="e#1441#1561#0" />
                 <element signature="e#2745#2862#0" />
@@ -182,17 +181,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Float.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="26" column="46" lean-forward="true" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
+            <state relative-caret-position="284">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Float.hpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="513">
+              <caret line="39" column="58" lean-forward="true" selection-start-line="39" selection-start-column="58" selection-end-line="39" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -270,10 +269,10 @@
         <option value="$PROJECT_DIR$/src/Value.cpp" />
         <option value="$PROJECT_DIR$/src/Math.hpp" />
         <option value="$PROJECT_DIR$/src/Vector2D.cpp" />
-        <option value="$PROJECT_DIR$/src/Float.hpp" />
-        <option value="$PROJECT_DIR$/src/Float.cpp" />
         <option value="$PROJECT_DIR$/src/Value.hpp" />
         <option value="$PROJECT_DIR$/test.cpp" />
+        <option value="$PROJECT_DIR$/src/Float.cpp" />
+        <option value="$PROJECT_DIR$/src/Float.hpp" />
       </list>
     </option>
   </component>
@@ -384,7 +383,7 @@
       <workItem from="1532627904623" duration="6977000" />
       <workItem from="1532638109679" duration="22081000" />
       <workItem from="1533172687237" duration="42000" />
-      <workItem from="1534320359725" duration="19819000" />
+      <workItem from="1534320359725" duration="21558000" />
     </task>
     <task id="LOCAL-00001" summary="Timer templatisation">
       <created>1532637444929</created>
@@ -397,7 +396,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62195000" />
+    <option name="totallyTimeSpent" value="63934000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -418,17 +417,17 @@
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" sideWeight="0.4994664" weight="0.32972974" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.44557098" visible="true" weight="0.32864866" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" sideWeight="0.43916756" visible="true" weight="0.32864866" />
       <window_info anchor="bottom" id="Debug" order="4" sideWeight="0.4909285" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.49839914" weight="0.32972974" />
       <window_info anchor="bottom" id="CMake" order="8" sideWeight="0.49733192" weight="0.32864866" />
       <window_info anchor="bottom" id="TeamCity" order="9" sideWeight="0.49893278" weight="0.32972974" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.55442905" side_tool="true" visible="true" weight="0.32864866" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.56083244" side_tool="true" visible="true" weight="0.32864866" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.4994664" weight="0.32972974" />
-      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.4439701" weight="0.32864866" />
+      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.4375667" weight="0.32864866" />
       <window_info anchor="right" id="Database" order="0" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -525,6 +524,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="90" column="66" selection-start-line="90" selection-start-column="66" selection-end-line="90" selection-end-column="66" />
+          <folding>
+            <element signature="e#78#97#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -544,10 +553,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Value.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="190" column="5" lean-forward="true" selection-start-line="190" selection-start-column="5" selection-end-line="190" selection-end-column="5" />
+        <state relative-caret-position="398">
+          <caret line="176" column="18" lean-forward="true" selection-start-line="176" selection-start-column="18" selection-end-line="176" selection-end-column="18" />
           <folding>
             <element signature="e#0#73#0" />
+            <element signature="e#133#150#0" expanded="true" />
             <element signature="e#513#554#0" />
             <element signature="e#551#593#0" />
             <element signature="e#577#629#0" />
@@ -572,7 +582,6 @@
             <element signature="e#2310#2395#0" />
             <element signature="e#2398#2531#0" />
             <element signature="e#1675#1708#0" />
-            <element signature="e#1706#1781#0" />
             <element signature="e#1774#1814#0" />
             <element signature="e#1441#1561#0" />
             <element signature="e#2745#2862#0" />
@@ -580,27 +589,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Float.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Float.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="26" column="46" lean-forward="true" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
+        <state relative-caret-position="284">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.cpp">
+    <entry file="file://$PROJECT_DIR$/src/Float.hpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="92" column="17" lean-forward="true" selection-start-line="92" selection-start-column="17" selection-end-line="92" selection-end-column="17" />
-          <folding>
-            <element signature="e#78#97#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="513">
+          <caret line="39" column="58" lean-forward="true" selection-start-line="39" selection-start-column="58" selection-end-line="39" selection-end-column="58" />
         </state>
       </provider>
     </entry>
