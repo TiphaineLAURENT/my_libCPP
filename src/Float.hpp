@@ -19,6 +19,11 @@ public:
 	Float(const float &v);
 	~Float() override = default;
 	Float(const Float &copy) = default;
+	Float &operator=(const Float &other)
+	{
+		_v = other;
+		return *this;
+	}
 	Float &operator=(const float &other);
 	Float(Float &&) noexcept = default;
 	Float &operator=(Float &&) = default;
@@ -34,14 +39,71 @@ public:
 	                            const Float &max = 1
 	);
 
+	operator float() const
+	{
+		return this->_v;
+	}
+
+	Float operator+(const Float &value) const
+	{
+		return _v + value;
+	}
+	Float operator-(const Float &value) const
+	{
+		return _v - value;
+	}
+	Float operator*(const Float &value) const
+	{
+		return _v * value;
+	}
+	Float operator/(const Float &value) const
+	{
+		return _v / value;
+	}
+
+	template <class T>
+	Float operator*(const T &value) const
+	{
+		return _v * value;
+	}
+
+	template <class T>
+	bool operator!=(const T &value) const
+	{
+		return _v != value;
+	}
+	template <class T>
+	bool operator==(const T &value) const
+	{
+		return _v == value;
+	}
+
 private:
 private:
 };
 
-Float operator+(const float &value1, const Float &value2);
-Float operator-(const float &value1, const Float &value2);
-Float operator*(const float &value2, const Float &value1);
-Float operator/(const float &value1, const Float &value2);
+template <class T>
+Float operator+(const T &value1, const Float &value2)
+{
+	return value1 + value2.value();
+}
+template <class T>
+Float operator-(const T &value1, const Float &value2)
+{
+	return value1 - value2.value();
+}
+template <class T>
+Float operator*(const T &value1, const Float &value2)
+{
+	return value1 * value2.value();
+}
+template <class T>
+Float operator/(const T &value1, const Float &value2)
+{
+	if (value2 == 0)
+		return INFINITY;
+	return value1 / value2.value();
+}
 
 }
 

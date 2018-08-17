@@ -11,6 +11,8 @@
 #include <string>
 #include <array>
 
+#include "Float.hpp"
+
 namespace MY_LIBCPP
 {
 
@@ -20,8 +22,8 @@ namespace Math
 class Vector2D
 {
 public:
-	Vector2D(float x, float y);
-	explicit Vector2D(float angle);
+	Vector2D(const Float &x, const Float &y);
+	explicit Vector2D(const Float &angle);
 	~Vector2D() = default;
 	Vector2D(const Vector2D &copy);
 	Vector2D &operator=(const Vector2D &other) = default;
@@ -30,51 +32,51 @@ public:
 
 public:
 	std::string to_string() const;
-	void set(float x, float y) noexcept;
+	void set(const Float &x, const Float &y) noexcept;
 	void set(const Vector2D &other);
-	float mag() const;
-	float magSq() const;
-	float dot(float x, float y) const;
-	float dot(const Vector2D &) const;
-	float dist(const Vector2D &) const;
+	Float mag() const;
+	Float magSq() const;
+	Float dot(Float x, Float y) const;
+	Float dot(const Vector2D &) const;
+	Float dist(const Vector2D &) const;
 	Vector2D &normalize();
-	Vector2D &limit(float max);
-	Vector2D &setMag(float mag);
-	float heading();
-	Vector2D &rotate(float angle);
-	float angleBetween(const Vector2D &);
-	Vector2D &lerp(float x, float y, float amt);
-	Vector2D &lerp(const Vector2D &, float amt);
-	std::array<float, 2> array() const;
+	Vector2D &limit(Float max);
+	Vector2D &setMag(Float mag);
+	Float heading();
+	Vector2D &rotate(Float angle);
+	Float angleBetween(const Vector2D &);
+	Vector2D &lerp(const Float &x, const Float &y, const Float &amt);
+	Vector2D &lerp(const Vector2D &, const Float &amt);
+	std::array<Float, 2> array() const;
 
 	bool operator==(const Vector2D &) const;
 
 	Vector2D &operator+=(const Vector2D &);
-	Vector2D &operator+=(float value);
+	Vector2D &operator+=(Float value);
 	Vector2D &operator-=(const Vector2D &);
-	Vector2D &operator-=(float value);
+	Vector2D &operator-=(Float value);
 	Vector2D &operator*=(const Vector2D &);
-	Vector2D &operator*=(float value);
+	Vector2D &operator*=(Float value);
 	Vector2D &operator/=(const Vector2D &);
-	Vector2D &operator/=(float value);
+	Vector2D &operator/=(Float value);
 
 	static Vector2D random2D();
 
 private:
-	float _x;
-	float _y;
+	Float _x;
+	Float _y;
 
 private:
 };
 
 Vector2D operator+(const Vector2D&, const Vector2D&);
-Vector2D operator+(const Vector2D&, float value);
+Vector2D operator+(const Vector2D&, Float value);
 Vector2D operator-(const Vector2D&, const Vector2D&);
-Vector2D operator-(const Vector2D&, float value);
+Vector2D operator-(const Vector2D&, Float value);
 Vector2D operator*(const Vector2D&, const Vector2D&);
-Vector2D operator*(const Vector2D&, float value);
+Vector2D operator*(const Vector2D&, Float value);
 Vector2D operator/(const Vector2D&, const Vector2D&);
-Vector2D operator/(const Vector2D&, float value);
+Vector2D operator/(const Vector2D&, Float value);
 
 std::ostream &operator<<(std::ostream &out, const Vector2D&);
 

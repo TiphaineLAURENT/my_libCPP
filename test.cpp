@@ -56,7 +56,7 @@ int main()
 	std::cout << MY_LIBCPP::Math::map<float>(10.1, 10, 20, 0, 10) <<
 	        std::endl;*/
 
-	/*srandom(time(nullptr));
+	srandom(time(nullptr));
 	MY_LIBCPP::Math::Vector2D vector =
 		MY_LIBCPP::Math::Vector2D::random2D();
 	std::cout << vector << std::endl;
@@ -65,7 +65,7 @@ int main()
 	vector.set(10, 100);
 	vector.setMag(23);
 	std::cout << vector.mag() << std::endl;
-	std::cout << vector.normalize() << std::endl;*/
+	std::cout << vector.normalize() << std::endl;
 
 
 	/*MY_LIBCPP::Float v = 3;
@@ -113,7 +113,7 @@ int main()
 		std::cout << "False" << std::endl;
 	std::cout << "Test " + MY_LIBCPP::Int::getRandomInt() << std::endl;*/
 
-	MY_LIBCPP::Int i = 4;
+	/*MY_LIBCPP::Int i = 4;
 	std::cout << i.getOpposite() << std::endl;
 	std::cout << i.getInverse() << std::endl;
 	if (i == 0)
@@ -126,7 +126,7 @@ int main()
 	std::cout << i.square() << std::endl;
 	std::cout << i.squareRoot() << std::endl;
 	std::cout << i.floor() << std::endl;
-	std::cout << i.truncate() << std::endl;
+	std::cout << i.truncate() << std::endl;*/
 
 	return 0;
 }

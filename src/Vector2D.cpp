@@ -7,10 +7,7 @@
 
 #include <cmath>
 #include "Vector2D.hpp"
-#include "Value.hpp"
 #include "Math.hpp"
-#include "Float.hpp"
-#include "Int.hpp"
 
 namespace MY_LIBCPP
 {
@@ -18,11 +15,11 @@ namespace MY_LIBCPP
 namespace Math
 {
 
-Vector2D::Vector2D(float x, float y)
+Vector2D::Vector2D(const Float &x, const Float &y)
 	: _x(x), _y(y)
 {}
 
-Vector2D::Vector2D(float angle)
+Vector2D::Vector2D(const Float &angle)
 	: _x(cosf(angle)), _y(sinf(angle))
 {}
 
@@ -32,7 +29,7 @@ std::string Vector2D::to_string() const
 	                   + std::to_string(_y) + "]");
 }
 
-void Vector2D::set(float x, float y) noexcept
+void Vector2D::set(const Float &x, const Float &y) noexcept
 {
 	_x = x;
 	_y = y;
@@ -40,21 +37,22 @@ void Vector2D::set(float x, float y) noexcept
 
 void Vector2D::set(const Vector2D &other)
 {
-	std::array<float, 2> otherArray = other.array();
+	std::array<Float, 2> otherArray = other.array();
 	_x = otherArray[0];
 	_y = otherArray[1];
 }
 
 Vector2D::Vector2D(const Vector2D &copy)
+	: _x(0), _y(0)
 {
-	std::array<float, 2> copyArray = copy.array();
+	std::array<Float, 2> copyArray = copy.array();
 	_x = copyArray[0];
 	_y = copyArray[1];
 }
 
 Vector2D &Vector2D::operator+=(const Vector2D &other)
 {
-	std::array<float, 2> otherArray = other.array();
+	std::array<Float, 2> otherArray = other.array();
 	_x += otherArray[0];
 	_y += otherArray[1];
 	return *this;
@@ -62,7 +60,7 @@ Vector2D &Vector2D::operator+=(const Vector2D &other)
 
 Vector2D &Vector2D::operator-=(const Vector2D &other)
 {
-	std::array<float, 2> otherArray = other.array();
+	std::array<Float, 2> otherArray = other.array();
 	_x -= otherArray[0];
 	_y -= otherArray[1];
 	return *this;
@@ -70,7 +68,7 @@ Vector2D &Vector2D::operator-=(const Vector2D &other)
 
 Vector2D &Vector2D::operator*=(const Vector2D &other)
 {
-	std::array<float, 2> otherArray = other.array();
+	std::array<Float, 2> otherArray = other.array();
 	_x *= otherArray[0];
 	_y *= otherArray[1];
 	return *this;
@@ -78,33 +76,33 @@ Vector2D &Vector2D::operator*=(const Vector2D &other)
 
 Vector2D &Vector2D::operator/=(const Vector2D &other)
 {
-	std::array<float, 2> otherArray = other.array();
+	std::array<Float, 2> otherArray = other.array();
 	_x /= otherArray[0];
 	_y /= otherArray[1];
 	return *this;
 }
 
-float Vector2D::mag() const
+Float Vector2D::mag() const
 {
 	return sqrtf(magSq());
 }
 
-float Vector2D::magSq() const
+Float Vector2D::magSq() const
 {
 	return _x * _x + _y * _y;
 }
 
-float Vector2D::dot(float x, float y) const
+Float Vector2D::dot(Float x, Float y) const
 {
 	return _x * x + _y * y;
 }
 
-float Vector2D::dot(const Vector2D &other) const
+Float Vector2D::dot(const Vector2D &other) const
 {
 	return other.dot(_x, _y);
 }
 
-float Vector2D::dist(const Vector2D &other) const
+Float Vector2D::dist(const Vector2D &other) const
 {
 	Vector2D newVector(other - *this);
 	return newVector.mag();
@@ -112,101 +110,101 @@ float Vector2D::dist(const Vector2D &other) const
 
 Vector2D &Vector2D::normalize()
 {
-	float len = mag();
+	Float len = mag();
 	if (len != 0)
-		*this *= 1/len;
+		*this *= 1 / len;
 	return *this;
 }
 
-Vector2D &Vector2D::operator+=(float value)
+Vector2D &Vector2D::operator+=(Float value)
 {
 	_x += value;
 	_y += value;
 	return *this;
 }
 
-Vector2D &Vector2D::operator-=(float value)
+Vector2D &Vector2D::operator-=(Float value)
 {
 	_x -= value;
 	_y -= value;
 	return *this;
 }
 
-Vector2D &Vector2D::operator*=(float value)
+Vector2D &Vector2D::operator*=(Float value)
 {
 	_x *= value;
 	_y *= value;
 	return *this;
 }
 
-Vector2D &Vector2D::operator/=(float value)
+Vector2D &Vector2D::operator/=(Float value)
 {
 	_x /= value;
 	_y /= value;
 	return *this;
 }
 
-Vector2D &Vector2D::limit(float max)
+Vector2D &Vector2D::limit(Float max)
 {
-	float mSq = magSq();
+	Float mSq = magSq();
 	if (mSq > max * max) {
 		*this /= sqrtf(mSq) * max;
 	}
 	return *this;
 }
 
-Vector2D &Vector2D::setMag(float mag)
+Vector2D &Vector2D::setMag(Float mag)
 {
 	return this->normalize() *= mag;
 }
 
-float Vector2D::heading()
+Float Vector2D::heading()
 {
 	return from_radians(atan2f(_x , _y));
 }
 
-Vector2D &Vector2D::rotate(float angle)
+Vector2D &Vector2D::rotate(Float angle)
 {
-	float newHeading = to_radians(heading() + angle);
-	float magnitude = mag();
+	Float newHeading = to_radians(heading() + angle);
+	Float magnitude = mag();
 	_x = cosf(newHeading) * magnitude;
 	_y = sinf(newHeading) * magnitude;
 	return *this;
 }
 
-float Vector2D::angleBetween(const Vector2D &other)
+Float Vector2D::angleBetween(const Vector2D &other)
 {
-	float dotmagmag = dot(other) / (mag() * other.mag());
-	float angle = acosf(fmin(1, fmax(-1, dotmagmag)));
+	Float dotmagmag = dot(other) / (mag() * other.mag());
+	Float angle = acosf(fmin(1, fmax(-1, dotmagmag)));
 	return from_radians(angle);
 }
 
-Vector2D &Vector2D::lerp(float x, float y, float amt)
+Vector2D &Vector2D::lerp(const Float &x, const Float &y, const Float &amt)
 {
 	_x += (x - _x) * amt;
 	_y += (y - _y) * amt;
 	return *this;
 }
 
-Vector2D &Vector2D::lerp(const Vector2D &, float amt)
+Vector2D &Vector2D::lerp(const Vector2D &, const Float &amt)
 {
 	return lerp(_x , _y, amt);
 }
 
-std::array<float, 2> Vector2D::array() const
+std::array<Float, 2> Vector2D::array() const
 {
-	return std::array<float, 2>{_x, _y};
+	return std::array<Float, 2>{_x, _y};
 }
 
 bool Vector2D::operator==(const Vector2D &other) const
 {
-	std::array<float, 2> otherArray = other.array();
+	std::array<Float, 2> otherArray = other.array();
 	return _x == otherArray[0] && _y == otherArray[1];
 }
 
 Vector2D Vector2D::random2D()
 {
-	return Vector2D((float)MY_LIBCPP::Float::getRandomValue() * TWO_PI);
+	return Vector2D(MY_LIBCPP::Float::getRandomFloat() * TWO_PI);
 }
 
 Vector2D operator+(const Vector2D &vector1, const Vector2D &vector2)
@@ -233,25 +231,25 @@ Vector2D operator/(const Vector2D &vector1, const Vector2D &vector2)
 	return div /= vector2;
 }
 
-Vector2D operator+(const Vector2D &vector, float value)
+Vector2D operator+(const Vector2D &vector, Float value)
 {
 	Vector2D add(vector);
 	return add += value;
 }
 
-Vector2D operator-(const Vector2D &vector, float value)
+Vector2D operator-(const Vector2D &vector, Float value)
 {
 	Vector2D sub(vector);
 	return sub -= value;
 }
 
-Vector2D operator*(const Vector2D &vector, float value)
+Vector2D operator*(const Vector2D &vector, Float value)
 {
 	Vector2D mul(vector);
 	return mul *= value;
 }
 
-Vector2D operator/(const Vector2D &vector, float value)
+Vector2D operator/(const Vector2D &vector, Float value)
 {
 	Vector2D div(vector);
 	return div /= value;

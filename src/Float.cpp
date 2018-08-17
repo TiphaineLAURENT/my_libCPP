@@ -30,26 +30,4 @@ Float Float::getRandomFloat(const Float &min, const Float &max)
 	return dis(gen);
 }
 
-Float operator+(const float &value1, const Float &value2)
-{
-	return value1 + value2.value();
-}
-
-Float operator-(const float &value1, const Float &value2)
-{
-	return value1 - value2.value();
-}
-
-Float operator*(const float &value1, const Float &value2)
-{
-	return value1 * value2.value();
-}
-
-Float operator/(const float &value1, const Float &value2)
-{
-	if (value2 == 0)
-		return INFINITY;
-	return value1 / value2.value();
-}
-
 }
