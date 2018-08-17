@@ -28,10 +28,12 @@ public:
 	static constexpr int MAXVALUE = +2147483647;
 	static constexpr int MINVALUE = -2147483647;
 
-	static Int randomInt(const Int &min = MINVALUE,
-	                     const Int &max = MAXVALUE);
-	static std::vector<Int> primeNumber(const Int &min = 2,
-	                                    const Int &max = 100);
+	static Int getRandomInt(const Int &min = MINVALUE,
+	                        const Int &max = MAXVALUE
+	);
+	static std::vector<Int> getPrimeNumbers(const Int &min = 2,
+	                                        const Int &max = 100
+	);
 
 private:
 private:

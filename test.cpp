@@ -88,7 +88,7 @@ int main()
 
 	if (MY_LIBCPP::Float(2.0) != 3)
 		std::cout << "False" << std::endl;
-	std::cout << "Test " + MY_LIBCPP::Float::randomFloat() << std::endl;*/
+	std::cout << "Test " + MY_LIBCPP::Float::getRandomFloat() << std::endl;*/
 
 	/*MY_LIBCPP::Int v = 3;
 	v *= 5;
@@ -111,17 +111,22 @@ int main()
 
 	if (MY_LIBCPP::Int(2) != 3)
 		std::cout << "False" << std::endl;
-	std::cout << "Test " + MY_LIBCPP::Int::randomInt() << std::endl;*/
+	std::cout << "Test " + MY_LIBCPP::Int::getRandomInt() << std::endl;*/
 
-	MY_LIBCPP::Int i = 0;
-	std::cout << i.opposite() << std::endl;
-	std::cout << i.inverse() << std::endl;
+	MY_LIBCPP::Int i = 4;
+	std::cout << i.getOpposite() << std::endl;
+	std::cout << i.getInverse() << std::endl;
 	if (i == 0)
 		std::cout << "True" << std::endl;
 
-	for (auto &p : i.primeNumber())
+	for (auto &p : i.getPrimeNumbers(10, 100))
 		std::cout << p + ",";
 	std::cout << std::endl;
+
+	std::cout << i.square() << std::endl;
+	std::cout << i.squareRoot() << std::endl;
+	std::cout << i.floor() << std::endl;
+	std::cout << i.truncate() << std::endl;
 
 	return 0;
 }

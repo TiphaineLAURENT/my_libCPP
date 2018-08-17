@@ -23,7 +23,7 @@ Int &Int::operator=(const int &other)
 	return *this;
 }
 
-Int Int::randomInt(const Int &min, const Int &max)
+Int Int::getRandomInt(const Int &min, const Int &max)
 {
 	std::random_device rd;
 	std::mt19937 gen(rd());
@@ -31,7 +31,7 @@ Int Int::randomInt(const Int &min, const Int &max)
 	return dis(gen);
 }
 
-std::vector<Int> Int::primeNumber(const Int &min, const Int &max)
+std::vector<Int> Int::getPrimeNumbers(const Int &min, const Int &max)
 {
 	std::vector<Int> primes;
 	bool isPrime = false;
@@ -39,7 +39,7 @@ std::vector<Int> Int::primeNumber(const Int &min, const Int &max)
 	for (Int n = min; n < max; ++n) {
 		isPrime = true;
 
-		Int fs = floor(sqrt(n.value()));
+		Int fs = std::floor(sqrt(n.value()));
 		for (Int i = 2; i <= fs; ++i) {
 			if (n % i == 0) {
 				isPrime = false;

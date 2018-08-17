@@ -10,6 +10,7 @@
 #include "Value.hpp"
 #include "Math.hpp"
 #include "Float.hpp"
+#include "Int.hpp"
 
 namespace MY_LIBCPP
 {
@@ -205,7 +206,7 @@ bool Vector2D::operator==(const Vector2D &other) const
 
 Vector2D Vector2D::random2D()
 {
-	return Vector2D((float)MY_LIBCPP::Float::randomValue() * TWO_PI);
+	return Vector2D((float)MY_LIBCPP::Float::getRandomValue() * TWO_PI);
 }
 
 Vector2D operator+(const Vector2D &vector1, const Vector2D &vector2)

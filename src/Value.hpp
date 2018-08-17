@@ -26,7 +26,7 @@ public:
 	Value(const Value &copy) = default;
 	Value<T> &operator=(const Value &other)
 	{
-		_v = other.value();
+		this->_v = other.value();
 		return *this;
 	}
 	Value(Value &&) noexcept = default;
@@ -35,27 +35,27 @@ public:
 public:
 	const T &value() const noexcept
 	{
-		return _v;
+		return this->_v;
 	}
 
 	const std::string &type() const noexcept
 	{
-		return _type;
+		return this->_type;
 	}
 
 	std::string to_string() const
 	{
-		return std::to_string(_v);
+		return std::to_string(this->_v);
 	}
 
 	bool operator==(const Value &other) const
 	{
-		return _v == other.value();
+		return this->_v == other.value();
 	}
 
 	bool operator==(const T &other) const
 	{
-		return _v == other;
+		return this->_v == other;
 	}
 
 	bool operator!=(const Value &other) const
@@ -70,176 +70,178 @@ public:
 
 	bool operator<=(const Value &other) const
 	{
-		return _v <= other.value();
+		return this->_v <= other.value();
 	}
 
 	bool operator<=(const T &other) const
 	{
-		return _v <= other;
+		return this->_v <= other;
 	}
 
 	bool operator>=(const Value &other) const
 	{
-		return _v >= other.value();
+		return this->_v >= other.value();
 	}
 
 	bool operator>=(const T &other) const
 	{
-		return _v >= other;
+		return this->_v >= other;
 	}
 
 	bool operator>(const Value &other) const
 	{
-		return _v > other.value();
+		return this->_v > other.value();
 	}
 
 	bool operator>(const T &other) const
 	{
-		return _v > other;
+		return this->_v > other;
 	}
 
 	bool operator<(const Value &other) const
 	{
-		return _v < other.value();
+		return this->_v < other.value();
 	}
 
 	bool operator<(const T &other) const
 	{
-		return _v < other;
+		return this->_v < other;
 	}
 
 	Value<T> &operator+=(const Value &other)
 	{
-		_v += other.value();
+		this->_v += other.value();
 		return *this;
 	}
 
 	Value<T> &operator-=(const Value &other)
 	{
-		_v -= other.value();
+		this->_v -= other.value();
 		return *this;
 	}
 
 	Value<T> &operator*=(const Value &other)
 	{
-		_v *= other.value();
+		this->_v *= other.value();
 		return *this;
 	}
 
 	Value<T> &operator/=(const Value &other)
 	{
 		if (other.value() == 0)
-			_v = INFINITY;
+			this->_v = INFINITY;
 		else
-			_v /= other.value();
+			this->_v /= other.value();
 		return *this;
 	}
 
 	Value<T> &operator+=(const T &other)
 	{
-		_v += other;
+		this->_v += other;
 		return *this;
 	}
 
 	Value<T> &operator-=(const T &other)
 	{
-		_v -= other;
+		this->_v -= other;
 		return *this;
 	}
 
 	Value<T> &operator*=(const T &other)
 	{
-		_v *= other;
+		this->_v *= other;
 		return *this;
 	}
 
 	Value<T> &operator/=(const T &other)
 	{
 		if (other == 0)
-			_v = INFINITY;
+			this->_v = INFINITY;
 		else
-			_v /= other;
+			this->_v /= other;
 		return *this;
 	}
 
 	Value<T> operator+(const Value &other)
 	{
-		return Value<T>(_v + other.value());
+		return Value<T>(this->_v + other.value());
 	}
 
 	Value<T> operator-(const Value &other)
 	{
-		return Value<T>(_v - other.value());
+		return Value<T>(this->_v - other.value());
 	}
 
 	Value<T> operator*(const Value &other)
 	{
-		return Value<T>(_v * other.value());
+		return Value<T>(this->_v * other.value());
 	}
 
 	Value<T> operator/(const Value &other)
 	{
 		if (other == 0)
 			return Value<T>(INFINITY);
-		return Value<T>(_v / other.value());
+		return Value<T>(this->_v / other.value());
 	}
 
 	Value<T> operator+(const T &other)
 	{
-		return Value<T>(_v + other);
+		return Value<T>(this->_v + other);
 	}
 
 	Value<T> operator-(const T &other)
 	{
-		return Value<T>(_v - other);
+		return Value<T>(this->_v - other);
 	}
 
 	Value<T> operator*(const T &other)
 	{
-		return Value<T>(_v * other);
+		return Value<T>(this->_v * other);
 	}
 
 	Value<T> operator/(const T &other)
 	{
 		if (other == 0)
 			return Value<T>(INFINITY);
-		return Value<T>(_v / other);
+		return Value<T>(this->_v / other);
 	}
 
 	Value<T> operator%(const Value &other)
 	{
 		if (other == 0)
 			return Value<T>(other);
-		return Value<T>(_v % other.value());
+		return Value<T>(this->_v % other.value());
 	}
 
 	Value<T> operator%(const T &other)
 	{
 		if (other == 0)
 			return Value<T>(other);
-		return Value<T>(_v % other);
+		return Value<T>(this->_v % other);
 	}
 
 	const Value<T> &operator++()
 	{
-		_v++;
+		this->_v++;
 		return *this;
 	}
 
 	const Value<T> &operator--()
 	{
-		_v--;
+		this->_v--;
 		return *this;
 	}
 
 	const Value<T> operator++(int val)
 	{
-		return ++_v;
+		++this->_v;
+		return *this;
 	}
 
 	const Value<T> operator--(int val)
 	{
-		return --_v;
+		--this->_v;
+		return *this;
 	}
 
 	static void initRandom()
@@ -247,26 +249,50 @@ public:
 		srandom(time(nullptr));
 	}
 
-	static Value<T> randomValue()
+	static Value<T> getRandomValue()
 	{
 		return Value<T>(random() / static_cast<T>(RAND_MAX));
 	}
 
 	explicit operator T() const
 	{
-		return _v;
+		return this->_v;
 	}
 
-	Value<T> opposite() const
+	Value<T> getOpposite() const
 	{
-		return Value<T>(-_v);
+		return Value<T>(-this->_v);
 	}
 
-	Value<T> inverse() const
+	Value<T> getInverse() const
 	{
-		if (_v == 0)
+		if (this->_v == 0)
 			return Value<T>(0);
-		return Value<T>(1/_v);
+		return Value<T>(1 / this->_v);
+	}
+
+	Value<T> &square()
+	{
+		this->_v *= this->_v;
+		return *this;
+	}
+
+	Value<T> &squareRoot()
+	{
+		this->_v = sqrt(this->_v);
+		return *this;
+	}
+
+	Value<T> &floor()
+	{
+		this->_v = std::floor(this->_v);
+		return *this;
+	}
+
+	Value<T> &truncate()
+	{
+		this->_v = std::trunc(this->_v);
+		return *this;
 	}
 
 protected:

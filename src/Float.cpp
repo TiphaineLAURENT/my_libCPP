@@ -22,7 +22,7 @@ Float &Float::operator=(const float &other)
 	return *this;
 }
 
-Float Float::randomFloat(const Float &min, const Float &max)
+Float Float::getRandomFloat(const Float &min, const Float &max)
 {
 	std::random_device rd;
 	std::mt19937 gen(rd());
