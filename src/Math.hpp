@@ -8,7 +8,8 @@
 #ifndef MY_LIBCPP_MATH_HPP
 #define MY_LIBCPP_MATH_HPP
 
-#include "Vector2D.hpp"
+# include "Vector2D.hpp"
+# include "Vector3D.hpp"
 
 namespace MY_LIBCPP
 {

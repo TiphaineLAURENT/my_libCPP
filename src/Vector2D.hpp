@@ -22,8 +22,9 @@ namespace Math
 class Vector2D
 {
 public:
+	Vector2D();
 	Vector2D(const Float &x, const Float &y);
-	explicit Vector2D(const Float &angle);
+	explicit Vector2D(const Float &angle); // fromAngle with len 1
 	~Vector2D() = default;
 	Vector2D(const Vector2D &copy);
 	Vector2D &operator=(const Vector2D &other) = default;
@@ -36,15 +37,15 @@ public:
 	void set(const Vector2D &other);
 	Float mag() const;
 	Float magSq() const;
-	Float dot(Float x, Float y) const;
-	Float dot(const Vector2D &) const;
+	Float dot(const Float &x, const Float &y) const;
+	Float dot(const Vector2D&) const;
 	Float dist(const Vector2D &) const;
 	Vector2D &normalize();
-	Vector2D &limit(Float max);
-	Vector2D &setMag(Float mag);
-	Float heading();
-	Vector2D &rotate(Float angle);
-	Float angleBetween(const Vector2D &);
+	Vector2D &limit(const Float &max);
+	Vector2D &setMag(const Float &mag);
+	Float heading() const;
+	Vector2D &rotate(const Float &angle);
+	Float angleBetween(const Vector2D &) const;
 	Vector2D &lerp(const Float &x, const Float &y, const Float &amt);
 	Vector2D &lerp(const Vector2D &, const Float &amt);
 	std::array<Float, 2> array() const;
@@ -52,13 +53,13 @@ public:
 	bool operator==(const Vector2D &) const;
 
 	Vector2D &operator+=(const Vector2D &);
-	Vector2D &operator+=(Float value);
+	Vector2D &operator+=(const Float &value);
 	Vector2D &operator-=(const Vector2D &);
-	Vector2D &operator-=(Float value);
+	Vector2D &operator-=(const Float &value);
 	Vector2D &operator*=(const Vector2D &);
-	Vector2D &operator*=(Float value);
+	Vector2D &operator*=(const Float &value);
 	Vector2D &operator/=(const Vector2D &);
-	Vector2D &operator/=(Float value);
+	Vector2D &operator/=(const Float &value);
 
 	static Vector2D random2D();
 
@@ -70,13 +71,13 @@ private:
 };
 
 Vector2D operator+(const Vector2D&, const Vector2D&);
-Vector2D operator+(const Vector2D&, Float value);
+Vector2D operator+(const Vector2D&, const Float &value);
 Vector2D operator-(const Vector2D&, const Vector2D&);
-Vector2D operator-(const Vector2D&, Float value);
+Vector2D operator-(const Vector2D&, const Float &value);
 Vector2D operator*(const Vector2D&, const Vector2D&);
-Vector2D operator*(const Vector2D&, Float value);
+Vector2D operator*(const Vector2D&, const Float &value);
 Vector2D operator/(const Vector2D&, const Vector2D&);
-Vector2D operator/(const Vector2D&, Float value);
+Vector2D operator/(const Vector2D&, const Float &value);
 
 std::ostream &operator<<(std::ostream &out, const Vector2D&);
 

@@ -8,6 +8,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_library(my_libCPP SHARED src/library.hpp src/Timer.hpp src/String.cpp
         src/String.hpp src/Math.hpp src/Vector2D.cpp src/Vector2D.hpp
+        src/Vector3D.cpp src/Vector3D.hpp
         src/Math.cpp src/Value.cpp src/Value.hpp src/Float.cpp src/Float.hpp
         src/Int.cpp src/Int.hpp)
 
