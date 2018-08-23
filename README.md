@@ -9,10 +9,10 @@ Adds functionnality to the STL
 * Float - **Float class to replace float**
 * Int - **Int class to replace int**
 * Vector2D - **Two dimensional vector inspired by p5.vector2D**
+* Vector3D - **Three dimensional vector inspired by p5.vector3D**
 
 ### TODO
 
 * Double
 * Char
-* Vector3D
-* Continue to expands with more functionnalities all previous classes
+* Continue to expands all previous classes
