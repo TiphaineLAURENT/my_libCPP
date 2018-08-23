@@ -1,5 +1,5 @@
 /*
-** EPIintECH PROJECint, 2021
+** EPITECH PROJECT, 2021
 ** my_libCPP
 ** File description:
 ** Value<int>
@@ -35,6 +35,87 @@ public:
 	                                        const Int &max = 100
 	);
 
+	operator int() const
+	{
+		return this->_v;
+	}
+
+	Int operator+(const Int &value) const
+	{
+		return _v + value.value();
+	}
+
+	Int operator-(const Int &value) const
+	{
+		return _v - value.value();
+	}
+
+	Int operator*(const Int &value) const
+	{
+		return _v * value.value();
+	}
+
+	Int operator/(const Int &value) const
+	{
+		return _v / value.value();
+	}
+
+	template <class T>
+	Int operator+(const T &value) const
+	{
+		return _v + value;
+	}
+
+	template <class T>
+	Int operator-(const T &value) const
+	{
+		return _v - value;
+	}
+
+	template <class T>
+	Int operator*(const T &value) const
+	{
+		return _v * value;
+	}
+
+	template <class T>
+	Int operator/(const T &value) const
+	{
+		return _v / value;
+	}
+
+	bool operator<=(const Int &other) const
+	{
+		return this->_v <= other.value();
+	}
+
+	bool operator>=(const Int &other) const
+	{
+		return this->_v >= other.value();
+	}
+
+	bool operator<(const Int &other) const
+	{
+		return this->_v < other.value();
+	}
+
+	bool operator>(const Int &other) const
+	{
+		return this->_v > other.value();
+	}
+
+	template <class T>
+	bool operator<(const T &other) const
+	{
+		return this->_v < other;
+	}
+
+	template <class T>
+	bool operator>(const T &other) const
+	{
+		return this->_v > other;
+	}
+
 private:
 private:
 };
@@ -44,10 +125,26 @@ Int operator-(const int &value1, const Int &value2);
 Int operator*(const int &value2, const Int &value1);
 Int operator/(const int &value1, const Int &value2);
 
-bool operator<=(const int &value1, const Int &value2);
-bool operator>=(const int &value1, const Int &value2);
-bool operator<(const int &value1, const Int &value2);
-bool operator>(const int &value1, const Int &value2);
+template <class T>
+bool operator<=(const T &value1, const Int &value2)
+{
+	return value1 <= value2.value();
+}
+template <class T>
+bool operator>=(const T &value1, const Int &value2)
+{
+	return value1 >= value2.value();
+}
+template <class T>
+bool operator<(const T &value1, const Int &value2)
+{
+	return value1 < value2.value();
+}
+template <class T>
+bool operator>(const T &value1, const Int &value2)
+{
+	return value1 > value2.value();
+}
 
 }
 

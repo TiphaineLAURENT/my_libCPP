@@ -73,24 +73,4 @@ Int operator/(const int &value1, const Int &value2)
 	return value1 / value2.value();
 }
 
-bool operator<=(const int &value1, const Int &value2)
-{
-	return value1 <= value2.value();
-}
-
-bool operator>=(const int &value1, const Int &value2)
-{
-	return value1 >= value2.value();
-}
-
-bool operator<(const int &value1, const Int &value2)
-{
-	return value1 < value2.value();
-}
-
-bool operator>(const int &value1, const Int &value2)
-{
-	return value1 > value2.value();
-}
-
 }

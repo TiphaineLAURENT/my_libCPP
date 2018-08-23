@@ -56,7 +56,7 @@ int main()
 	std::cout << MY_LIBCPP::Math::map<float>(10.1, 10, 20, 0, 10) <<
 	        std::endl;*/
 
-	srandom(time(nullptr));
+	/*srandom(time(nullptr));
 	MY_LIBCPP::Math::Vector2D vector =
 		MY_LIBCPP::Math::Vector2D::random2D();
 	std::cout << vector << std::endl;
@@ -65,7 +65,7 @@ int main()
 	vector.set(10, 100);
 	vector.setMag(23);
 	std::cout << vector.mag() << std::endl;
-	std::cout << vector.normalize() << std::endl;
+	std::cout << vector.normalize() << std::endl;*/
 
 
 	/*MY_LIBCPP::Float v = 3;
@@ -127,6 +127,31 @@ int main()
 	std::cout << i.squareRoot() << std::endl;
 	std::cout << i.floor() << std::endl;
 	std::cout << i.truncate() << std::endl;*/
+
+
+	MY_LIBCPP::Matrix A({{1, 2, 3}, {4, 5, 6}, {7, 8, 9}});
+	MY_LIBCPP::Matrix B({{10, 11, 12}, {13, 14, 15}, {16, 17, 18}});
+
+	std::cout << A.mul(B) << std::endl;
+
+	MY_LIBCPP::Matrix C({
+		                    {3, 0, 2, -1},
+		                    {1, 2, 0, -2},
+		                    {4, 0, 6, -3},
+		                    {5, 0, 2, 0}
+	                    });
+	std::cout << C.determinant(C) << std::endl;
+	std::cout << C.transpose(C) << std::endl;
+	std::cout << C.cofactor(C) << std::endl;
+	std::cout << C.inverse(C) << std::endl;
+
+	std::cout << MY_LIBCPP::Matrix(4) << std::endl;
+
+	/*MY_LIBCPP::Float f(-3);
+	std::cout << f.to_string() << std::endl;
+	std::cout << f.length() << std::endl;
+	std::cout << f.integers() << std::endl;
+	std::cout << f.decimals() << std::endl;*/
 
 	return 0;
 }

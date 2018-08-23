@@ -46,19 +46,22 @@ public:
 
 	Float operator+(const Float &value) const
 	{
-		return _v + value;
+		return _v + value.value();
 	}
+
 	Float operator-(const Float &value) const
 	{
-		return _v - value;
+		return _v - value.value();
 	}
+
 	Float operator*(const Float &value) const
 	{
-		return _v * value;
+		return _v * value.value();
 	}
+
 	Float operator/(const Float &value) const
 	{
-		return _v / value;
+		return _v / value.value();
 	}
 
 	template <class T>

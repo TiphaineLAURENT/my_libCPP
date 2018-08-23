@@ -295,6 +295,53 @@ public:
 		return *this;
 	}
 
+	unsigned long absolute_length() const
+	{
+		return this->to_string().length();
+	}
+
+	unsigned long length() const
+	{
+		std::string str = this->to_string();
+
+		if (this->_v >= 0)
+			return str.length();
+		else if (this->_v < 0) {
+			if (str.find('.') == std::string::npos)
+				return str.length() - 2;
+			else
+				return str.length() - 1;
+		}
+	}
+
+	unsigned long decimals() const
+	{
+		std::string str = this->to_string();
+		unsigned long pos = str.find('.');
+
+		if (pos == std::string::npos)
+			return 0;
+
+		if (this->_v > 0)
+			return str.substr(pos).length();
+		else
+			return str.substr(pos).length() - 1;
+	}
+
+	unsigned long integers() const
+	{
+		std::string str = this->to_string();
+		unsigned long pos = str.find('.');
+
+		if (pos == std::string::npos)
+			return this->length();
+
+		if (this->_v > 0)
+			return str.substr(0, pos).length();
+		else
+			return str.substr(0, pos).length() - 1;
+	}
+
 protected:
 	T _v;
 	std::string _type;
