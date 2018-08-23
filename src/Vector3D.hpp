@@ -24,6 +24,7 @@ class Vector3D
 public:
 	Vector3D();
 	Vector3D(const Float &x, const Float &y, const Float &z);
+	explicit Vector3D(const std::array<Float, 3>&);
 	Vector3D(const Float &theta, const Float &phi); // fromAngles with len 1
 	~Vector3D() = default;
 	Vector3D(const Vector3D &copy);

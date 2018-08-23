@@ -23,6 +23,11 @@ Vector3D::Vector3D(const Float &x, const Float &y, const Float &z)
 	: _x(x), _y(y), _z(z)
 {}
 
+Vector3D::Vector3D(const std::array<Float, 3> &array)
+: _x(array[0]), _y(array[1]), _z(array[2])
+{}
+
+
 Vector3D::Vector3D(const Float &theta, const Float &phi)
 	: _x(sinf(theta) * sinf(phi)), _y(-cosf(theta)),
 	  _z(sinf(theta) * cosf(phi))

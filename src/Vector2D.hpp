@@ -24,6 +24,7 @@ class Vector2D
 public:
 	Vector2D();
 	Vector2D(const Float &x, const Float &y);
+	explicit Vector2D(const std::array<Float, 2>&);
 	explicit Vector2D(const Float &angle); // fromAngle with len 1
 	~Vector2D() = default;
 	Vector2D(const Vector2D &copy);

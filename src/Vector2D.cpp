@@ -23,6 +23,10 @@ Vector2D::Vector2D(const Float &x, const Float &y)
 	: _x(x), _y(y)
 {}
 
+Vector2D::Vector2D(const std::array<Float, 2> &array)
+	: _x(array[0]), _y(array[1])
+{}
+
 Vector2D::Vector2D(const Float &angle)
 	: _x(cosf(angle)), _y(sinf(angle))
 {}
