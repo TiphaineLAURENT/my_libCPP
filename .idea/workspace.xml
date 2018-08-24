@@ -43,16 +43,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25b7cc46-be5c-4ed1-964b-243546b183b8" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Matrix.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Matrix.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Float.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Float.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Int.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Int.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Int.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Int.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Math.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Math.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Value.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Value.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -79,6 +70,7 @@
           <entry key="cpp" value="11634" />
           <entry key="gitignore" value="27" />
           <entry key="hpp" value="9023" />
+          <entry key="md" value="74" />
           <entry key="mm" value="35" />
           <entry key="txt" value="29" />
         </counts>
@@ -86,6 +78,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CMakeLists.txt" value="29" />
+          <entry key="Markdown" value="74" />
           <entry key="ObjectiveC" value="20692" />
           <entry key="PLAIN_TEXT" value="27" />
         </counts>
@@ -154,7 +147,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Matrix.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="369">
@@ -187,12 +180,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="190">
-                <caret line="10" column="63" selection-start-line="10" selection-start-column="63" selection-end-line="10" selection-end-column="63" />
+              <first_editor relative-caret-position="247">
+                <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
               </first_editor>
               <second_editor />
             </state>
@@ -261,7 +254,6 @@
         <option value="$PROJECT_DIR$/src/library.hpp" />
         <option value="$PROJECT_DIR$/src/Float.cpp" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/Vector3D.cpp" />
         <option value="$PROJECT_DIR$/src/Vector2D.cpp" />
         <option value="$PROJECT_DIR$/src/Vector2D.hpp" />
@@ -274,6 +266,7 @@
         <option value="$PROJECT_DIR$/src/Matrix.hpp" />
         <option value="$PROJECT_DIR$/test.cpp" />
         <option value="$PROJECT_DIR$/src/Matrix.cpp" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -387,7 +380,7 @@
       <workItem from="1533172687237" duration="42000" />
       <workItem from="1534320359725" duration="46583000" />
       <workItem from="1534974847392" duration="4097000" />
-      <workItem from="1534982494467" duration="26136000" />
+      <workItem from="1534982494467" duration="26351000" />
     </task>
     <task id="LOCAL-00001" summary="Timer templatisation">
       <created>1532637444929</created>
@@ -400,7 +393,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="119192000" />
+    <option name="totallyTimeSpent" value="119407000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -588,21 +581,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="190">
-            <caret line="10" column="63" selection-start-line="10" selection-start-column="63" selection-end-line="10" selection-end-column="63" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="464">
@@ -650,6 +628,21 @@
           <folding>
             <element signature="e#76#95#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="247">
+            <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>

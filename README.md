@@ -10,6 +10,7 @@ Adds functionnality to the STL
 * Int - **Int class to replace int**
 * Vector2D - **Two dimensional vector inspired by p5.vector2D**
 * Vector3D - **Three dimensional vector inspired by p5.vector3D**
+* Matrix - **N\*M dimensional matrix inspired by numpy.matrix**
 
 ### TODO
 
