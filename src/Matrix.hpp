@@ -8,9 +8,11 @@
 #ifndef MY_LIBCPP_MATRIX_HPP
 # define MY_LIBCPP_MATRIX_HPP
 
-#include <array>
-#include "Float.hpp"
-#include "Int.hpp"
+# include <array>
+# include "Float.hpp"
+# include "Int.hpp"
+# include "Vector2D.hpp"
+# include "Vector3D.hpp"
 
 namespace MY_LIBCPP
 {
@@ -21,6 +23,8 @@ public:
 	explicit Matrix(const Int &n);
 	Matrix(const Int &m, const Int &n);
 	explicit Matrix(const std::vector<std::vector<Float>> &array);
+	explicit Matrix(const Math::Vector2D&);
+	explicit Matrix(const Math::Vector3D&);
 	~Matrix() = default;
 	Matrix(const Matrix &copy) = default;
 	Matrix &operator=(const Matrix &other) = default;
@@ -28,20 +32,32 @@ public:
 	Matrix &operator=(Matrix &&) = default;
 
 public:
-	Matrix add(const Matrix&);
-	Matrix sub(const Matrix&);
-	Matrix mul(const Matrix&);
-	Matrix div(const Matrix&);
+	Matrix add(const Matrix&) const;
+	Matrix sub(const Matrix&) const;
+	Matrix mul(const Matrix&) const;
+	Matrix div(const Matrix&) const;
 
-	Matrix add(const Float&);
-	Matrix sub(const Float&);
-	Matrix mul(const Float&);
-	Matrix div(const Float&);
+	Matrix &operator+(const Matrix &);
+	Matrix &operator-(const Matrix &);
+	Matrix &operator*(const Matrix &);
+	Matrix &operator/(const Matrix &);
 
-	Float determinant(const Matrix &matrix) const;
-	Matrix transpose(const Matrix &matrix) const;
-	Matrix cofactor(const Matrix &matrix) const;
-	Matrix inverse(const Matrix &matrix) const;
+	Matrix add(const Float&) const;
+	Matrix sub(const Float&) const;
+	Matrix mul(const Float&) const;
+	Matrix div(const Float&) const;
+
+	Matrix &operator+(const Float &);
+	Matrix &operator-(const Float &);
+	Matrix &operator*(const Float &);
+	Matrix &operator/(const Float &);
+
+	Float determinant() const;
+	Matrix transpose() const;
+	Matrix cofactor() const;
+	Matrix inverse() const;
+
+	Matrix power(const Int&) const;
 
 	Int cols() const;
 	Int rows() const;

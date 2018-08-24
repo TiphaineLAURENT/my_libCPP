@@ -39,11 +39,19 @@ Matrix::Matrix(const Int &m, const Int &n)
 	}
 }
 
-Matrix::Matrix(const std::vector<std::vector<MY_LIBCPP::Float>> &matrixay)
-	: _m(matrixay)
+Matrix::Matrix(const std::vector<std::vector<MY_LIBCPP::Float>> &matrix)
+	: _m(matrix)
 {}
 
-Matrix Matrix::add(const Matrix &other)
+Matrix::Matrix(const Math::Vector2D &vector)
+	: _m({{vector.array()[0]}, {vector.array()[1]}})
+{}
+
+Matrix::Matrix(const Math::Vector3D &vector)
+	: _m({{vector.array()[0]}, {vector.array()[1]}, {vector.array()[2]}})
+{}
+
+Matrix Matrix::add(const Matrix &other) const
 {
 	Matrix result(*this);
 
@@ -65,7 +73,7 @@ Matrix Matrix::add(const Matrix &other)
 	return result;
 }
 
-Matrix Matrix::sub(const Matrix &other)
+Matrix Matrix::sub(const Matrix &other) const
 {
 	Matrix result(*this);
 
@@ -87,7 +95,7 @@ Matrix Matrix::sub(const Matrix &other)
 	return result;
 }
 
-Matrix Matrix::mul(const Matrix &other)
+Matrix Matrix::mul(const Matrix &other) const
 {
 	Int rowsA = this->rows();
 	Int colsA = this->cols();
@@ -111,22 +119,22 @@ Matrix Matrix::mul(const Matrix &other)
 	return result;
 }
 
-Matrix Matrix::div(const Matrix &other)
+Matrix Matrix::div(const Matrix &other) const
 {
 	Matrix result(*this);
 
-	result.mul(other.inverse(other));
+	result.mul(other.inverse());
 	return result;
 }
 
 Int Matrix::cols() const
 {
-	return this->_m.size();
+	return this->_m[0].size();
 }
 
 Int Matrix::rows() const
 {
-	return this->_m[0].size();
+	return this->_m.size();
 }
 
 const std::vector<Float> &Matrix::operator[](const Int &index) const
@@ -139,7 +147,7 @@ std::vector<Float> &Matrix::operator[](const Int &index)
 	return this->_m[index];
 }
 
-Matrix Matrix::add(const Float &value)
+Matrix Matrix::add(const Float &value) const
 {
 	Matrix result(*this);
 
@@ -154,7 +162,7 @@ Matrix Matrix::add(const Float &value)
 	return result;
 }
 
-Matrix Matrix::sub(const Float &value)
+Matrix Matrix::sub(const Float &value) const
 {
 	Matrix result(*this);
 
@@ -169,7 +177,7 @@ Matrix Matrix::sub(const Float &value)
 	return result;
 }
 
-Matrix Matrix::mul(const Float &value)
+Matrix Matrix::mul(const Float &value) const
 {
 	Matrix result(*this);
 
@@ -184,7 +192,7 @@ Matrix Matrix::mul(const Float &value)
 	return result;
 }
 
-Matrix Matrix::div(const Float &value)
+Matrix Matrix::div(const Float &value) const
 {
 	Matrix result(*this);
 
@@ -199,9 +207,9 @@ Matrix Matrix::div(const Float &value)
 	return result;
 }
 
-Float Matrix::determinant(const Matrix &matrix) const
+Float Matrix::determinant() const
 {
-	Int q = matrix.rows();
+	Int q = this->rows();
 
 	if(q > 2) {
 		Float resultOfSubStep = 0;
@@ -211,39 +219,40 @@ Float Matrix::determinant(const Matrix &matrix) const
 				Int counter = 0;
 				for (Int k = 0; k < q; k++) {
 					if(k == i)continue;
-					smallerMatrix[j][counter] = matrix[j+1][k];
+					smallerMatrix[j][counter] =
+						this->_m[j+1][k];
 					counter++;
 				}
 			}
-			Float k1 = matrix[0][i] * determinant(smallerMatrix);
+			Float k1 = this->_m[0][i] * smallerMatrix.determinant();
 			resultOfSubStep += powf(-1, i) * k1;
 		}
 		return resultOfSubStep;
 	}
 	else if(q == 2)
-		return matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0];
+		return this->_m[0][0] * this->_m[1][1] - this->_m[0][1] * this->_m[1][0];
 	else
-		return matrix[0][0];
+		return this->_m[0][0];
 }
 
-Matrix Matrix::transpose(const Matrix &matrix) const
+Matrix Matrix::transpose() const
 {
 	Matrix result(*this);
-	Int dim = matrix.rows();
+	Int dim = this->rows();
 
 	Matrix tmp(dim);
 	for (Int i = 0; i < dim; i++)
 		for (Int j = 0; j < dim; j++)
-			tmp[i][j] = matrix[j][i];
+			tmp[i][j] = this->_m[j][i];
 	for (Int i = 0; i < dim; i++)
 		for (Int j = 0; j < dim; j++)
-			result[i][j] = tmp[i][j]; // determinant(matrix);
+			result[i][j] = tmp[i][j];
 	return result;
 }
 
-Matrix Matrix::cofactor(const Matrix &matrix) const
+Matrix Matrix::cofactor() const
 {
-	Int n = matrix.rows();
+	Int n = this->rows();
 	Matrix b(n), c(n);
 
 	for (Int h = 0; h < n; h++)
@@ -253,7 +262,7 @@ Matrix Matrix::cofactor(const Matrix &matrix) const
 			for (Int i = 0; i < n; i++)
 				for (Int j = 0; j < n; j++) {
 					if (i != h && j != l) {
-						b[m][k] = matrix[i][j];
+						b[m][k] = this->_m[i][j];
 						if (k < n - 2)
 							k++;
 						else {
@@ -262,22 +271,76 @@ Matrix Matrix::cofactor(const Matrix &matrix) const
 						}
 					}
 				}
-			c[h][l] = pow(-1, h + l) * b.determinant(b);
+			c[h][l] = pow(-1, h + l) * b.determinant();
 		}
 	return c;
 }
 
-Matrix Matrix::inverse(const Matrix &matrix) const
+Matrix Matrix::inverse() const
 {
-	Int n = matrix.rows();
+	Int n = this->rows();
 
-	if(matrix.determinant(matrix) == 0)
+	if(this->determinant() == 0)
 		printf("\nInverse of Entered Matrix is not possible\n");
 	else if(n == 1)
 		return Matrix(1);
 	else
-		return transpose(cofactor(matrix))
-			.mul(1/matrix.determinant(matrix));
+		return this->cofactor().transpose().mul(1 / this->determinant());
+}
+
+Matrix Matrix::power(const Int &power) const
+{
+	if (power == 1)
+		return *this;
+	return this->mul(this->power(power - 1));
+}
+
+Matrix &Matrix::operator+(const Matrix &other)
+{
+	*this = this->add(other);
+	return *this;
+}
+
+Matrix &Matrix::operator-(const Matrix &other)
+{
+	*this = this->sub(other);
+	return *this;
+}
+
+Matrix &Matrix::operator*(const Matrix &other)
+{
+	*this = this->mul(other);
+	return *this;
+}
+
+Matrix &Matrix::operator/(const Matrix &other)
+{
+	*this = this->div(other);
+	return *this;
+}
+
+Matrix &Matrix::operator+(const Float &scalar)
+{
+	*this = this->add(scalar);
+	return *this;
+}
+
+Matrix &Matrix::operator-(const Float &scalar)
+{
+	*this = this->sub(scalar);
+	return *this;
+}
+
+Matrix &Matrix::operator*(const Float &scalar)
+{
+	*this = this->mul(scalar);
+	return *this;
+}
+
+Matrix &Matrix::operator/(const Float &scalar)
+{
+	*this = this->div(scalar);
+	return *this;
 }
 
 std::ostream &operator<<(std::ostream &out, const Matrix &matrix)

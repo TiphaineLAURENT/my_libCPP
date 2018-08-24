@@ -140,12 +140,17 @@ int main()
 		                    {4, 0, 6, -3},
 		                    {5, 0, 2, 0}
 	                    });
-	std::cout << C.determinant(C) << std::endl;
-	std::cout << C.transpose(C) << std::endl;
-	std::cout << C.cofactor(C) << std::endl;
-	std::cout << C.inverse(C) << std::endl;
+	std::cout << C.determinant() << std::endl;
+	std::cout << C.transpose() << std::endl;
+	std::cout << C.cofactor() << std::endl;
+	std::cout << C.inverse() << std::endl;
 
-	std::cout << MY_LIBCPP::Matrix(4) << std::endl;
+	std::cout << MY_LIBCPP::Matrix(4) - 3 << std::endl;
+
+	std::cout << MY_LIBCPP::Matrix(MY_LIBCPP::Math::Vector3D(1, 2, 3))
+	          << std::endl;
+
+	std::cout << C.power(3) << std::endl;
 
 	/*MY_LIBCPP::Float f(-3);
 	std::cout << f.to_string() << std::endl;
